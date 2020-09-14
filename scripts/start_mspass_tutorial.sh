@@ -11,11 +11,11 @@ else
 fi
 
 $SPARK_HOME/sbin/start-master.sh
-$SPARK_HOME/sbin/start-slave.sh spark://127.0.0.1:$SPARK_MASTER_PORT
+$SPARK_HOME/sbin/start-slave.sh spark://0.0.0.0:$SPARK_MASTER_PORT
 [[ -d $MONGO_DATA ]] || mkdir $MONGO_DATA
 mongod --dbpath $MONGO_DATA --logpath $MONGO_LOG --bind_ip_all &
 if [ $# -eq 0 ]; then
-  jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root
+  jupyter notebook --notebook-dir=/notebooks/ --port=8888 --no-browser --ip=0.0.0.0 --allow-root
 else
   jupyter $@
 fi
