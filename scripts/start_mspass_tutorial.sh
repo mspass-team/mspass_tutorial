@@ -15,7 +15,11 @@ $SPARK_HOME/sbin/start-slave.sh spark://0.0.0.0:$SPARK_MASTER_PORT
 [[ -d $MONGO_DATA ]] || mkdir $MONGO_DATA
 mongod --dbpath $MONGO_DATA --logpath $MONGO_LOG --bind_ip_all &
 if [ $# -eq 0 ]; then
-  jupyter notebook --notebook-dir=/notebooks/ --port=8888 --no-browser --ip=0.0.0.0 --allow-root
+  pyspark \
+    --conf "spark.mongodb.input.uri=mongodb://0.0.0.0/test.myCollection?readPreference=primaryPreferred" \
+    --conf "spark.mongodb.output.uri=mongodb://0.0.0.0/test.myCollection" \
+    --conf "spark.master=spark://0.0.0.0:7077" \
+    --packages org.mongodb.spark:mongo-spark-connector_2.11:2.4.1
 else
-  jupyter $@
+  pyspark $@
 fi
