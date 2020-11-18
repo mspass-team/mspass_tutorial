@@ -6,10 +6,14 @@ from mspasspy.graphics import SeismicPlotter
 import numpy as np
 
 import matplotlib.pyplot as plt
-import mspasspy.ccore as mspass
+from mspasspy.ccore.seismic import (TimeSeries,
+        	Seismogram,
+        	TimeSeriesEnsemble,
+        	SeismogramEnsemble,
+                TimeReferenceType)
 
 def rickerwave(f, dt):
-    r"""
+    """
     Given a frequency and time sampling rate, outputs ricker function. The
     length of the function varies according to f and dt, in order for the
     ricker function starts and ends as zero. It is also considered that the
@@ -62,14 +66,14 @@ def setbasics(d,n):
     d.npts=n
     d.set_dt(0.005)
     d.t0=0.0
-    d.tref=mspass.TimeReferenceType.Relative
+    d.tref=TimeReferenceType.Relative
     d.live=True
 def makeseis():
     """
-    Builds mspass.Seismogram object used in this tutorial.  Components have
+    Builds Seismogram object used in this tutorial.  Components have
     amplitudes scaled by 1, 2, and 3 for 0, 1, and 2 respectively.
     """
-    d=mspass.Seismogram()
+    d=Seismogram()
     setbasics(d,1000)
     y=rickerwave(2.0,0.005)
     ny=len(y)
@@ -79,18 +83,18 @@ def makeseis():
     # editing parameters to rickerwave
     for k in range(3):
         for i in range(min(ny,1000)):
-            d.u[k,i]=y[i]/float(k+1)
+            d.data[k,i]=y[i]/float(k+1)
     return d
 def makets():
     """
-    Build mspass.TimeSeries object used in this tutorial
+    Build TimeSeries object used in this tutorial
     """
-    d=mspass.TimeSeries()
+    d=TimeSeries()
     setbasics(d,1000)
     y=rickerwave(2.0,0.005)
     ny=len(y)
     for i in range(min(ny,1000)):
-        d.s[i]=y[i]
+        d.data[i]=y[i]
     return d
 def maketsens(d,n=20,moveout=True,moveout_dt=0.05):
     """
@@ -100,9 +104,9 @@ def maketsens(d,n=20,moveout=True,moveout_dt=0.05):
     """
     # If python had templates this would be one because this and the
     # function below are identical except for types
-    result=mspass.TimeSeriesEnsemble()
+    result=TimeSeriesEnsemble()
     for i in range(n):
-        y=mspass.TimeSeries(d)  # this makes a required deep copy
+        y=TimeSeries(d)  # this makes a required deep copy
         if(moveout):
             y.t0+=float(i)*moveout_dt
         result.member.append(y)
@@ -113,9 +117,9 @@ def makeseisens(d,n=20,moveout=True,moveout_dt=0.05):
     applies a linear moveout to members using moveout_dt times
     count of member in ensemble.
     """
-    result=mspass.SeismogramEnsemble()
+    result=SeismogramEnsemble()
     for i in range(n):
-        y=mspass.Seismogram(d)  # this makes a required deep copy
+        y=Seismogram(d)  # this makes a required deep copy
         if(moveout):
             y.t0+=float(i)*moveout_dt
         result.member.append(y)
