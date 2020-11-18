@@ -1,0 +1,2334 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+ <FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:iris="http://www.fdsn.org/xml/station/1/iris" xsi:schemaLocation="http://www.fdsn.org/xml/station/1 http://www.fdsn.org/xml/station/fdsn-station-1.1.xsd" schemaVersion="1.1">
+  <Source>IRIS-DMC</Source>
+  <Sender>IRIS-DMC</Sender>
+  <Module>IRIS WEB SERVICE: fdsnws-station | version: 1.1.47</Module>
+  <ModuleURI></ModuleURI>
+  <Created>2020-10-23T01:16:20</Created>
+  <Network code="NE" startDate="1994-01-01T00:00:00" restrictedStatus="open">
+   <Description>New England Seismic Network (NESN)</Description>
+   <Identifier type="DOI">10.7914/SN/NE
+   </Identifier>
+   <TotalNumberStations>28</TotalNumberStations>
+   <SelectedNumberStations>1</SelectedNumberStations>
+   <Station code="WES" startDate="1994-11-02T00:00:00" restrictedStatus="open" iris:alternateNetworkCodes="_CEUSN,.CEUSN-CONTRIB,.GREG,_REALTIME,.UNRESTRICTED,_US-REGIONAL">
+    <Latitude>42.3848</Latitude>
+    <Longitude>-71.3218</Longitude>
+    <Elevation>60.0</Elevation>
+    <Site>
+     <Name>Weston Observatory, Weston, MA, USA</Name>
+    </Site>
+    <CreationDate>1994-11-02T00:00:00</CreationDate>
+    <TotalNumberChannels>30</TotalNumberChannels>
+    <SelectedNumberChannels>3</SelectedNumberChannels>
+    <Channel code="BHE" locationCode="" startDate="2010-03-23T18:00:00" endDate="2012-02-01T00:00:00" restrictedStatus="open">
+     <Latitude>42.3848</Latitude>
+     <Longitude>-71.3218</Longitude>
+     <Elevation>60</Elevation>
+     <Depth>0</Depth>
+     <Azimuth>90</Azimuth>
+     <Dip>0</Dip>
+     <SampleRate>4E01</SampleRate>
+     <ClockDrift>2.5E-04</ClockDrift>
+     <CalibrationUnits>
+      <Name>V</Name>
+      <Description>emf in volts</Description>
+     </CalibrationUnits>
+     <Sensor>
+      <Description>Trillium 120P, 120 s, 1201 V/m/s-RT130, gain 1, 40</Description>
+     </Sensor>
+     <Response>
+     <InstrumentSensitivity>
+       <Value>7.51485E8</Value>
+       <Frequency>0.05</Frequency>
+       <InputUnits>
+         <Name>m/s</Name>
+         <Description>Velocity in Meters Per Second</Description>
+       </InputUnits>
+       <OutputUnits>
+         <Name>counts</Name>
+         <Description>Digital Counts</Description>
+       </OutputUnits>
+     </InstrumentSensitivity>
+      <Stage number="1">
+      <PolesZeros>
+        <InputUnits>
+          <Name>m/s</Name>
+          <Description>Velocity in Meters Per Second</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>V</Name>
+          <Description>Volts</Description>
+        </OutputUnits>
+        <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+        <NormalizationFactor>308000.0</NormalizationFactor>
+        <NormalizationFrequency>1.0</NormalizationFrequency>
+        <Zero number="0">
+          <Real>0.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="1">
+          <Real>0.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="2">
+          <Real>-90.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="3">
+          <Real>-160.7</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="4">
+          <Real>-3108.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Pole number="0">
+          <Real>-0.03852</Real>
+          <Imaginary>-0.03658</Imaginary>
+        </Pole>
+        <Pole number="1">
+          <Real>-0.03852</Real>
+          <Imaginary>0.03658</Imaginary>
+        </Pole>
+        <Pole number="2">
+          <Real>-178.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Pole>
+        <Pole number="3">
+          <Real>-135.0</Real>
+          <Imaginary>-160.0</Imaginary>
+        </Pole>
+        <Pole number="4">
+          <Real>-135.0</Real>
+          <Imaginary>160.0</Imaginary>
+        </Pole>
+        <Pole number="5">
+          <Real>-671.0</Real>
+          <Imaginary>-1154.0</Imaginary>
+        </Pole>
+        <Pole number="6">
+          <Real>-671.0</Real>
+          <Imaginary>1154.0</Imaginary>
+        </Pole>
+      </PolesZeros>
+      <Decimation>
+        <InputSampleRate>102400.0</InputSampleRate>
+        <Factor>1</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0</Delay>
+        <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1200.0</Value>
+        <Frequency>1.0</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="2">
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="3">
+      <Coefficients>
+        <InputUnits>
+          <Name>V</Name>
+          <Description>Volts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">1.0</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>102400.0</InputSampleRate>
+        <Factor>1</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0</Delay>
+        <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>629129.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="4">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">9.76562E-4</Numerator>
+        <Numerator number="2">0.00244141</Numerator>
+        <Numerator number="3">0.00488281</Numerator>
+        <Numerator number="4">0.00854492</Numerator>
+        <Numerator number="5">0.0136719</Numerator>
+        <Numerator number="6">0.0205078</Numerator>
+        <Numerator number="7">0.0292969</Numerator>
+        <Numerator number="8">0.0393066</Numerator>
+        <Numerator number="9">0.0498047</Numerator>
+        <Numerator number="10">0.0600586</Numerator>
+        <Numerator number="11">0.0693359</Numerator>
+        <Numerator number="12">0.0769043</Numerator>
+        <Numerator number="13">0.0820312</Numerator>
+        <Numerator number="14">0.0839844</Numerator>
+        <Numerator number="15">0.0820312</Numerator>
+        <Numerator number="16">0.0769043</Numerator>
+        <Numerator number="17">0.0693359</Numerator>
+        <Numerator number="18">0.0600586</Numerator>
+        <Numerator number="19">0.0498047</Numerator>
+        <Numerator number="20">0.0393066</Numerator>
+        <Numerator number="21">0.0292969</Numerator>
+        <Numerator number="22">0.0205078</Numerator>
+        <Numerator number="23">0.0136719</Numerator>
+        <Numerator number="24">0.00854492</Numerator>
+        <Numerator number="25">0.00488281</Numerator>
+        <Numerator number="26">0.00244141</Numerator>
+        <Numerator number="27">9.76562E-4</Numerator>
+        <Numerator number="28">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>102400.0</InputSampleRate>
+        <Factor>8</Factor>
+        <Offset>0</Offset>
+        <Delay>1.3672E-4</Delay>
+        <Correction>1.3672E-4</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="5">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">0.00292969</Numerator>
+        <Numerator number="2">0.0161133</Numerator>
+        <Numerator number="3">0.0537109</Numerator>
+        <Numerator number="4">0.12085</Numerator>
+        <Numerator number="5">0.193359</Numerator>
+        <Numerator number="6">0.225586</Numerator>
+        <Numerator number="7">0.193359</Numerator>
+        <Numerator number="8">0.12085</Numerator>
+        <Numerator number="9">0.0537109</Numerator>
+        <Numerator number="10">0.0161133</Numerator>
+        <Numerator number="11">0.00292969</Numerator>
+        <Numerator number="12">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>12800.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>4.6875E-4</Delay>
+        <Correction>4.6875E-4</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="6">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">0.00292969</Numerator>
+        <Numerator number="2">0.0161133</Numerator>
+        <Numerator number="3">0.0537109</Numerator>
+        <Numerator number="4">0.12085</Numerator>
+        <Numerator number="5">0.193359</Numerator>
+        <Numerator number="6">0.225586</Numerator>
+        <Numerator number="7">0.193359</Numerator>
+        <Numerator number="8">0.12085</Numerator>
+        <Numerator number="9">0.0537109</Numerator>
+        <Numerator number="10">0.0161133</Numerator>
+        <Numerator number="11">0.00292969</Numerator>
+        <Numerator number="12">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>6400.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>9.375E-4</Delay>
+        <Correction>9.375E-4</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="7">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">0.00292969</Numerator>
+        <Numerator number="2">0.0161133</Numerator>
+        <Numerator number="3">0.0537109</Numerator>
+        <Numerator number="4">0.12085</Numerator>
+        <Numerator number="5">0.193359</Numerator>
+        <Numerator number="6">0.225586</Numerator>
+        <Numerator number="7">0.193359</Numerator>
+        <Numerator number="8">0.12085</Numerator>
+        <Numerator number="9">0.0537109</Numerator>
+        <Numerator number="10">0.0161133</Numerator>
+        <Numerator number="11">0.00292969</Numerator>
+        <Numerator number="12">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>3200.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>0.001875</Delay>
+        <Correction>0.001875</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="8">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">0.00292969</Numerator>
+        <Numerator number="2">0.0161133</Numerator>
+        <Numerator number="3">0.0537109</Numerator>
+        <Numerator number="4">0.12085</Numerator>
+        <Numerator number="5">0.193359</Numerator>
+        <Numerator number="6">0.225586</Numerator>
+        <Numerator number="7">0.193359</Numerator>
+        <Numerator number="8">0.12085</Numerator>
+        <Numerator number="9">0.0537109</Numerator>
+        <Numerator number="10">0.0161133</Numerator>
+        <Numerator number="11">0.00292969</Numerator>
+        <Numerator number="12">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>1600.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>0.00375</Delay>
+        <Correction>0.00375</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="9">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">0.00292969</Numerator>
+        <Numerator number="2">0.0161133</Numerator>
+        <Numerator number="3">0.0537109</Numerator>
+        <Numerator number="4">0.12085</Numerator>
+        <Numerator number="5">0.193359</Numerator>
+        <Numerator number="6">0.225586</Numerator>
+        <Numerator number="7">0.193359</Numerator>
+        <Numerator number="8">0.12085</Numerator>
+        <Numerator number="9">0.0537109</Numerator>
+        <Numerator number="10">0.0161133</Numerator>
+        <Numerator number="11">0.00292969</Numerator>
+        <Numerator number="12">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>800.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0075</Delay>
+        <Correction>0.0075</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="10">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">-7.15032E-7</Numerator>
+        <Numerator number="1">-5.60109E-6</Numerator>
+        <Numerator number="2">-2.62179E-6</Numerator>
+        <Numerator number="3">-4.31403E-5</Numerator>
+        <Numerator number="4">-4.64771E-6</Numerator>
+        <Numerator number="5">1.43006E-6</Numerator>
+        <Numerator number="6">2.34769E-5</Numerator>
+        <Numerator number="7">1.43006E-6</Numerator>
+        <Numerator number="8">-5.27932E-5</Numerator>
+        <Numerator number="9">-3.66692E-4</Numerator>
+        <Numerator number="10">3.76107E-4</Numerator>
+        <Numerator number="11">8.54226E-4</Numerator>
+        <Numerator number="12">3.05081E-5</Numerator>
+        <Numerator number="13">-0.00127621</Numerator>
+        <Numerator number="14">-9.10951E-4</Numerator>
+        <Numerator number="15">0.00127669</Numerator>
+        <Numerator number="16">0.00215165</Numerator>
+        <Numerator number="17">-4.61554E-4</Numerator>
+        <Numerator number="18">-0.00333765</Numerator>
+        <Numerator number="19">-0.00140933</Numerator>
+        <Numerator number="20">0.00377072</Numerator>
+        <Numerator number="21">0.00419414</Numerator>
+        <Numerator number="22">-0.00264288</Numerator>
+        <Numerator number="23">-0.00720121</Numerator>
+        <Numerator number="24">-6.44006E-4</Numerator>
+        <Numerator number="25">0.009184</Numerator>
+        <Numerator number="26">0.00608445</Numerator>
+        <Numerator number="27">-0.00857824</Numerator>
+        <Numerator number="28">-0.0127401</Numerator>
+        <Numerator number="29">0.00398225</Numerator>
+        <Numerator number="30">0.0186261</Numerator>
+        <Numerator number="31">0.0052052</Numerator>
+        <Numerator number="32">-0.0209407</Numerator>
+        <Numerator number="33">-0.0181629</Numerator>
+        <Numerator number="34">0.0166669</Numerator>
+        <Numerator number="35">0.0322447</Numerator>
+        <Numerator number="36">-0.00346588</Numerator>
+        <Numerator number="37">-0.0429528</Numerator>
+        <Numerator number="38">-0.0193265</Numerator>
+        <Numerator number="39">0.044309</Numerator>
+        <Numerator number="40">0.0497909</Numerator>
+        <Numerator number="41">-0.0294164</Numerator>
+        <Numerator number="42">-0.0826078</Numerator>
+        <Numerator number="43">-0.00934166</Numerator>
+        <Numerator number="44">0.107552</Numerator>
+        <Numerator number="45">0.0816604</Numerator>
+        <Numerator number="46">-0.10311</Numerator>
+        <Numerator number="47">-0.204208</Numerator>
+        <Numerator number="48">-3.12231E-5</Numerator>
+        <Numerator number="49">0.390432</Numerator>
+        <Numerator number="50">0.589958</Numerator>
+        <Numerator number="51">0.390432</Numerator>
+        <Numerator number="52">-3.12231E-5</Numerator>
+        <Numerator number="53">-0.204208</Numerator>
+        <Numerator number="54">-0.10311</Numerator>
+        <Numerator number="55">0.0816604</Numerator>
+        <Numerator number="56">0.107552</Numerator>
+        <Numerator number="57">-0.00934166</Numerator>
+        <Numerator number="58">-0.0826078</Numerator>
+        <Numerator number="59">-0.0294164</Numerator>
+        <Numerator number="60">0.0497909</Numerator>
+        <Numerator number="61">0.044309</Numerator>
+        <Numerator number="62">-0.0193265</Numerator>
+        <Numerator number="63">-0.0429528</Numerator>
+        <Numerator number="64">-0.00346588</Numerator>
+        <Numerator number="65">0.0322447</Numerator>
+        <Numerator number="66">0.0166669</Numerator>
+        <Numerator number="67">-0.0181629</Numerator>
+        <Numerator number="68">-0.0209407</Numerator>
+        <Numerator number="69">0.0052052</Numerator>
+        <Numerator number="70">0.0186261</Numerator>
+        <Numerator number="71">0.00398225</Numerator>
+        <Numerator number="72">-0.0127401</Numerator>
+        <Numerator number="73">-0.00857824</Numerator>
+        <Numerator number="74">0.00608445</Numerator>
+        <Numerator number="75">0.009184</Numerator>
+        <Numerator number="76">-6.44006E-4</Numerator>
+        <Numerator number="77">-0.00720121</Numerator>
+        <Numerator number="78">-0.00264288</Numerator>
+        <Numerator number="79">0.00419414</Numerator>
+        <Numerator number="80">0.00377072</Numerator>
+        <Numerator number="81">-0.00140933</Numerator>
+        <Numerator number="82">-0.00333765</Numerator>
+        <Numerator number="83">-4.61554E-4</Numerator>
+        <Numerator number="84">0.00215165</Numerator>
+        <Numerator number="85">0.00127669</Numerator>
+        <Numerator number="86">-9.10951E-4</Numerator>
+        <Numerator number="87">-0.00127621</Numerator>
+        <Numerator number="88">3.05081E-5</Numerator>
+        <Numerator number="89">8.54226E-4</Numerator>
+        <Numerator number="90">3.76107E-4</Numerator>
+        <Numerator number="91">-3.66692E-4</Numerator>
+        <Numerator number="92">-4.1031E-4</Numerator>
+        <Numerator number="93">2.52645E-5</Numerator>
+        <Numerator number="94">2.61821E-4</Numerator>
+        <Numerator number="95">1.20602E-4</Numerator>
+        <Numerator number="96">-9.99854E-5</Numerator>
+        <Numerator number="97">-1.62312E-4</Numerator>
+        <Numerator number="98">-9.79595E-5</Numerator>
+        <Numerator number="99">-2.94355E-5</Numerator>
+        <Numerator number="100">-3.09847E-6</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>400.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>0.125</Delay>
+        <Correction>0.125</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="11">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">-1.09889E-5</Numerator>
+        <Numerator number="1">-1.99798E-5</Numerator>
+        <Numerator number="2">-3.29668E-5</Numerator>
+        <Numerator number="3">-4.39561E-5</Numerator>
+        <Numerator number="4">-4.79522E-5</Numerator>
+        <Numerator number="5">-4.09589E-5</Numerator>
+        <Numerator number="6">-1.8981E-5</Numerator>
+        <Numerator number="7">1.8981E-5</Numerator>
+        <Numerator number="8">6.7932E-5</Numerator>
+        <Numerator number="9">1.18881E-4</Numerator>
+        <Numerator number="10">1.58842E-4</Numerator>
+        <Numerator number="11">1.74826E-4</Numerator>
+        <Numerator number="12">1.57843E-4</Numerator>
+        <Numerator number="13">1.04895E-4</Numerator>
+        <Numerator number="14">2.49751E-5</Numerator>
+        <Numerator number="15">-6.49352E-5</Numerator>
+        <Numerator number="16">-1.4086E-4</Numerator>
+        <Numerator number="17">-1.78822E-4</Numerator>
+        <Numerator number="18">-1.6084E-4</Numerator>
+        <Numerator number="19">-8.59142E-5</Numerator>
+        <Numerator number="20">3.29668E-5</Numerator>
+        <Numerator number="21">1.63837E-4</Numerator>
+        <Numerator number="22">2.68733E-4</Numerator>
+        <Numerator number="23">3.10691E-4</Numerator>
+        <Numerator number="24">2.63737E-4</Numerator>
+        <Numerator number="25">1.3087E-4</Numerator>
+        <Numerator number="26">-6.09391E-5</Numerator>
+        <Numerator number="27">-2.6074E-4</Numerator>
+        <Numerator number="28">-4.08593E-4</Numerator>
+        <Numerator number="29">-4.48554E-4</Numerator>
+        <Numerator number="30">-3.53648E-4</Numerator>
+        <Numerator number="31">-1.35864E-4</Numerator>
+        <Numerator number="32">1.55845E-4</Numerator>
+        <Numerator number="33">4.38563E-4</Numerator>
+        <Numerator number="34">6.23379E-4</Numerator>
+        <Numerator number="35">6.38365E-4</Numerator>
+        <Numerator number="36">4.56546E-4</Numerator>
+        <Numerator number="37">1.08891E-4</Numerator>
+        <Numerator number="38">-3.15686E-4</Numerator>
+        <Numerator number="39">-6.94309E-4</Numerator>
+        <Numerator number="40">-9.03101E-4</Numerator>
+        <Numerator number="41">-8.5415E-4</Numerator>
+        <Numerator number="42">-5.33469E-4</Numerator>
+        <Numerator number="43">-7.99164E-6</Numerator>
+        <Numerator number="44">5.81421E-4</Numerator>
+        <Numerator number="45">0.00105695</Numerator>
+        <Numerator number="46">0.00125675</Numerator>
+        <Numerator number="47">0.00108792</Numerator>
+        <Numerator number="48">5.59443E-4</Numerator>
+        <Numerator number="49">-2.01799E-4</Numerator>
+        <Numerator number="50">-9.83021E-4</Numerator>
+        <Numerator number="51">-0.00154047</Numerator>
+        <Numerator number="52">-0.00167733</Numerator>
+        <Numerator number="53">-0.0013037</Numerator>
+        <Numerator number="54">-4.84518E-4</Numerator>
+        <Numerator number="55">5.71431E-4</Numerator>
+        <Numerator number="56">0.00155645</Numerator>
+        <Numerator number="57">0.00215685</Numerator>
+        <Numerator number="58">0.00214287</Numerator>
+        <Numerator number="59">0.00145855</Numerator>
+        <Numerator number="60">2.5075E-4</Numerator>
+        <Numerator number="61">-0.00115385</Numerator>
+        <Numerator number="62">-0.00233568</Numerator>
+        <Numerator number="63">-0.00290311</Numerator>
+        <Numerator number="64">-0.0026174</Numerator>
+        <Numerator number="65">-0.00148752</Numerator>
+        <Numerator number="66">2.15785E-4</Numerator>
+        <Numerator number="67">0.002014</Numerator>
+        <Numerator number="68">0.00335166</Numerator>
+        <Numerator number="69">0.00376825</Numerator>
+        <Numerator number="70">0.00304597</Numerator>
+        <Numerator number="71">0.0013037</Numerator>
+        <Numerator number="72">-0.001009</Numerator>
+        <Numerator number="73">-0.0032208</Numerator>
+        <Numerator number="74">-0.00463139</Numerator>
+        <Numerator number="75">-0.0047233</Numerator>
+        <Numerator number="76">-0.00334667</Numerator>
+        <Numerator number="77">-7.93211E-4</Numerator>
+        <Numerator number="78">0.00224477</Numerator>
+        <Numerator number="79">0.00486516</Numerator>
+        <Numerator number="80">0.00620583</Numerator>
+        <Numerator number="81">0.0057273</Numerator>
+        <Numerator number="82">0.00340861</Numerator>
+        <Numerator number="83">-1.99801E-4</Numerator>
+        <Numerator number="84">-0.00409193</Numerator>
+        <Numerator number="85">-0.00707596</Numerator>
+        <Numerator number="86">-0.00812791</Numerator>
+        <Numerator number="87">-0.00672831</Numerator>
+        <Numerator number="88">-0.00307194</Numerator>
+        <Numerator number="89">0.00192309</Numerator>
+        <Numerator number="90">0.00682721</Numerator>
+        <Numerator number="91">0.010091</Numerator>
+        <Numerator number="92">0.0105175</Numerator>
+        <Numerator number="93">0.00766437</Numerator>
+        <Numerator number="94">0.00206594</Numerator>
+        <Numerator number="95">-0.00483219</Numerator>
+        <Numerator number="96">-0.01101</Numerator>
+        <Numerator number="97">-0.0144376</Numerator>
+        <Numerator number="98">-0.0136934</Numerator>
+        <Numerator number="99">-0.00847457</Numerator>
+        <Numerator number="100">1.73827E-4</Numerator>
+        <Numerator number="101">0.010004</Numerator>
+        <Numerator number="102">0.018085</Numerator>
+        <Numerator number="103">0.0215935</Numerator>
+        <Numerator number="104">0.0186664</Numerator>
+        <Numerator number="105">0.00910094</Numerator>
+        <Numerator number="106">-0.0053287</Numerator>
+        <Numerator number="107">-0.0210541</Numerator>
+        <Numerator number="108">-0.0333958</Numerator>
+        <Numerator number="109">-0.0376226</Numerator>
+        <Numerator number="110">-0.030137</Numerator>
+        <Numerator number="111">-0.00949755</Numerator>
+        <Numerator number="112">0.0229931</Numerator>
+        <Numerator number="113">0.063304</Numerator>
+        <Numerator number="114">0.10534</Numerator>
+        <Numerator number="115">0.142124</Numerator>
+        <Numerator number="116">0.167226</Numerator>
+        <Numerator number="117">0.176134</Numerator>
+        <Numerator number="118">0.167226</Numerator>
+        <Numerator number="119">0.142124</Numerator>
+        <Numerator number="120">0.10534</Numerator>
+        <Numerator number="121">0.063304</Numerator>
+        <Numerator number="122">0.0229931</Numerator>
+        <Numerator number="123">-0.00949755</Numerator>
+        <Numerator number="124">-0.030137</Numerator>
+        <Numerator number="125">-0.0376226</Numerator>
+        <Numerator number="126">-0.0333958</Numerator>
+        <Numerator number="127">-0.0210541</Numerator>
+        <Numerator number="128">-0.0053287</Numerator>
+        <Numerator number="129">0.00910094</Numerator>
+        <Numerator number="130">0.0186664</Numerator>
+        <Numerator number="131">0.0215935</Numerator>
+        <Numerator number="132">0.018085</Numerator>
+        <Numerator number="133">0.010004</Numerator>
+        <Numerator number="134">1.73827E-4</Numerator>
+        <Numerator number="135">-0.00847457</Numerator>
+        <Numerator number="136">-0.0136934</Numerator>
+        <Numerator number="137">-0.0144376</Numerator>
+        <Numerator number="138">-0.01101</Numerator>
+        <Numerator number="139">-0.00483219</Numerator>
+        <Numerator number="140">0.00206594</Numerator>
+        <Numerator number="141">0.00766437</Numerator>
+        <Numerator number="142">0.0105175</Numerator>
+        <Numerator number="143">0.010091</Numerator>
+        <Numerator number="144">0.00682721</Numerator>
+        <Numerator number="145">0.00192309</Numerator>
+        <Numerator number="146">-0.00307194</Numerator>
+        <Numerator number="147">-0.00672831</Numerator>
+        <Numerator number="148">-0.00812791</Numerator>
+        <Numerator number="149">-0.00707596</Numerator>
+        <Numerator number="150">-0.00409193</Numerator>
+        <Numerator number="151">-1.99801E-4</Numerator>
+        <Numerator number="152">0.00340861</Numerator>
+        <Numerator number="153">0.0057273</Numerator>
+        <Numerator number="154">0.00620583</Numerator>
+        <Numerator number="155">0.00486516</Numerator>
+        <Numerator number="156">0.00224477</Numerator>
+        <Numerator number="157">-7.93211E-4</Numerator>
+        <Numerator number="158">-0.00334667</Numerator>
+        <Numerator number="159">-0.0047233</Numerator>
+        <Numerator number="160">-0.00463139</Numerator>
+        <Numerator number="161">-0.0032208</Numerator>
+        <Numerator number="162">-0.001009</Numerator>
+        <Numerator number="163">0.0013037</Numerator>
+        <Numerator number="164">0.00304597</Numerator>
+        <Numerator number="165">0.00376825</Numerator>
+        <Numerator number="166">0.00335166</Numerator>
+        <Numerator number="167">0.002014</Numerator>
+        <Numerator number="168">2.15785E-4</Numerator>
+        <Numerator number="169">-0.00148752</Numerator>
+        <Numerator number="170">-0.0026174</Numerator>
+        <Numerator number="171">-0.00290311</Numerator>
+        <Numerator number="172">-0.00233568</Numerator>
+        <Numerator number="173">-0.00115385</Numerator>
+        <Numerator number="174">2.5075E-4</Numerator>
+        <Numerator number="175">0.00145855</Numerator>
+        <Numerator number="176">0.00214287</Numerator>
+        <Numerator number="177">0.00215685</Numerator>
+        <Numerator number="178">0.00155645</Numerator>
+        <Numerator number="179">5.71431E-4</Numerator>
+        <Numerator number="180">-4.84518E-4</Numerator>
+        <Numerator number="181">-0.0013037</Numerator>
+        <Numerator number="182">-0.00167733</Numerator>
+        <Numerator number="183">-0.00154047</Numerator>
+        <Numerator number="184">-9.83021E-4</Numerator>
+        <Numerator number="185">-2.01799E-4</Numerator>
+        <Numerator number="186">5.59443E-4</Numerator>
+        <Numerator number="187">0.00108792</Numerator>
+        <Numerator number="188">0.00125675</Numerator>
+        <Numerator number="189">0.00105695</Numerator>
+        <Numerator number="190">5.81421E-4</Numerator>
+        <Numerator number="191">-7.99164E-6</Numerator>
+        <Numerator number="192">-5.33469E-4</Numerator>
+        <Numerator number="193">-8.5415E-4</Numerator>
+        <Numerator number="194">-9.03101E-4</Numerator>
+        <Numerator number="195">-6.94309E-4</Numerator>
+        <Numerator number="196">-3.15686E-4</Numerator>
+        <Numerator number="197">1.08891E-4</Numerator>
+        <Numerator number="198">4.56546E-4</Numerator>
+        <Numerator number="199">6.38365E-4</Numerator>
+        <Numerator number="200">6.23379E-4</Numerator>
+        <Numerator number="201">4.38563E-4</Numerator>
+        <Numerator number="202">1.55845E-4</Numerator>
+        <Numerator number="203">-1.35864E-4</Numerator>
+        <Numerator number="204">-3.53648E-4</Numerator>
+        <Numerator number="205">-4.48554E-4</Numerator>
+        <Numerator number="206">-4.08593E-4</Numerator>
+        <Numerator number="207">-2.6074E-4</Numerator>
+        <Numerator number="208">-6.09391E-5</Numerator>
+        <Numerator number="209">1.3087E-4</Numerator>
+        <Numerator number="210">2.63737E-4</Numerator>
+        <Numerator number="211">3.10691E-4</Numerator>
+        <Numerator number="212">2.68733E-4</Numerator>
+        <Numerator number="213">1.63837E-4</Numerator>
+        <Numerator number="214">3.29668E-5</Numerator>
+        <Numerator number="215">-8.59142E-5</Numerator>
+        <Numerator number="216">-1.6084E-4</Numerator>
+        <Numerator number="217">-1.78822E-4</Numerator>
+        <Numerator number="218">-1.4086E-4</Numerator>
+        <Numerator number="219">-6.49352E-5</Numerator>
+        <Numerator number="220">2.49751E-5</Numerator>
+        <Numerator number="221">1.04895E-4</Numerator>
+        <Numerator number="222">1.57843E-4</Numerator>
+        <Numerator number="223">1.74826E-4</Numerator>
+        <Numerator number="224">1.58842E-4</Numerator>
+        <Numerator number="225">1.18881E-4</Numerator>
+        <Numerator number="226">6.7932E-5</Numerator>
+        <Numerator number="227">1.8981E-5</Numerator>
+        <Numerator number="228">-1.8981E-5</Numerator>
+        <Numerator number="229">-4.09589E-5</Numerator>
+        <Numerator number="230">-4.79522E-5</Numerator>
+        <Numerator number="231">-4.39561E-5</Numerator>
+        <Numerator number="232">-3.29668E-5</Numerator>
+        <Numerator number="233">-1.99798E-5</Numerator>
+        <Numerator number="234">-1.09889E-5</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>200.0</InputSampleRate>
+        <Factor>5</Factor>
+        <Offset>0</Offset>
+        <Delay>0.585</Delay>
+        <Correction>0.585</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+     </Response>
+    </Channel>
+    <Channel code="BHN" locationCode="" startDate="2010-03-23T18:00:00" endDate="2012-02-01T00:00:00" restrictedStatus="open">
+     <Latitude>42.3848</Latitude>
+     <Longitude>-71.3218</Longitude>
+     <Elevation>60</Elevation>
+     <Depth>0</Depth>
+     <Azimuth>0</Azimuth>
+     <Dip>0</Dip>
+     <SampleRate>4E01</SampleRate>
+     <ClockDrift>2.5E-04</ClockDrift>
+     <CalibrationUnits>
+      <Name>V</Name>
+      <Description>emf in volts</Description>
+     </CalibrationUnits>
+     <Sensor>
+      <Description>Trillium 120P, 120 s, 1201 V/m/s-RT130, gain 1, 40</Description>
+     </Sensor>
+     <Response>
+     <InstrumentSensitivity>
+       <Value>7.51485E8</Value>
+       <Frequency>0.05</Frequency>
+       <InputUnits>
+         <Name>m/s</Name>
+         <Description>Velocity in Meters Per Second</Description>
+       </InputUnits>
+       <OutputUnits>
+         <Name>counts</Name>
+         <Description>Digital Counts</Description>
+       </OutputUnits>
+     </InstrumentSensitivity>
+      <Stage number="1">
+      <PolesZeros>
+        <InputUnits>
+          <Name>m/s</Name>
+          <Description>Velocity in Meters Per Second</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>V</Name>
+          <Description>Volts</Description>
+        </OutputUnits>
+        <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+        <NormalizationFactor>308000.0</NormalizationFactor>
+        <NormalizationFrequency>1.0</NormalizationFrequency>
+        <Zero number="0">
+          <Real>0.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="1">
+          <Real>0.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="2">
+          <Real>-90.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="3">
+          <Real>-160.7</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="4">
+          <Real>-3108.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Pole number="0">
+          <Real>-0.03852</Real>
+          <Imaginary>-0.03658</Imaginary>
+        </Pole>
+        <Pole number="1">
+          <Real>-0.03852</Real>
+          <Imaginary>0.03658</Imaginary>
+        </Pole>
+        <Pole number="2">
+          <Real>-178.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Pole>
+        <Pole number="3">
+          <Real>-135.0</Real>
+          <Imaginary>-160.0</Imaginary>
+        </Pole>
+        <Pole number="4">
+          <Real>-135.0</Real>
+          <Imaginary>160.0</Imaginary>
+        </Pole>
+        <Pole number="5">
+          <Real>-671.0</Real>
+          <Imaginary>-1154.0</Imaginary>
+        </Pole>
+        <Pole number="6">
+          <Real>-671.0</Real>
+          <Imaginary>1154.0</Imaginary>
+        </Pole>
+      </PolesZeros>
+      <Decimation>
+        <InputSampleRate>102400.0</InputSampleRate>
+        <Factor>1</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0</Delay>
+        <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1200.0</Value>
+        <Frequency>1.0</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="2">
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="3">
+      <Coefficients>
+        <InputUnits>
+          <Name>V</Name>
+          <Description>Volts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">1.0</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>102400.0</InputSampleRate>
+        <Factor>1</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0</Delay>
+        <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>629129.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="4">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">9.76562E-4</Numerator>
+        <Numerator number="2">0.00244141</Numerator>
+        <Numerator number="3">0.00488281</Numerator>
+        <Numerator number="4">0.00854492</Numerator>
+        <Numerator number="5">0.0136719</Numerator>
+        <Numerator number="6">0.0205078</Numerator>
+        <Numerator number="7">0.0292969</Numerator>
+        <Numerator number="8">0.0393066</Numerator>
+        <Numerator number="9">0.0498047</Numerator>
+        <Numerator number="10">0.0600586</Numerator>
+        <Numerator number="11">0.0693359</Numerator>
+        <Numerator number="12">0.0769043</Numerator>
+        <Numerator number="13">0.0820312</Numerator>
+        <Numerator number="14">0.0839844</Numerator>
+        <Numerator number="15">0.0820312</Numerator>
+        <Numerator number="16">0.0769043</Numerator>
+        <Numerator number="17">0.0693359</Numerator>
+        <Numerator number="18">0.0600586</Numerator>
+        <Numerator number="19">0.0498047</Numerator>
+        <Numerator number="20">0.0393066</Numerator>
+        <Numerator number="21">0.0292969</Numerator>
+        <Numerator number="22">0.0205078</Numerator>
+        <Numerator number="23">0.0136719</Numerator>
+        <Numerator number="24">0.00854492</Numerator>
+        <Numerator number="25">0.00488281</Numerator>
+        <Numerator number="26">0.00244141</Numerator>
+        <Numerator number="27">9.76562E-4</Numerator>
+        <Numerator number="28">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>102400.0</InputSampleRate>
+        <Factor>8</Factor>
+        <Offset>0</Offset>
+        <Delay>1.3672E-4</Delay>
+        <Correction>1.3672E-4</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="5">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">0.00292969</Numerator>
+        <Numerator number="2">0.0161133</Numerator>
+        <Numerator number="3">0.0537109</Numerator>
+        <Numerator number="4">0.12085</Numerator>
+        <Numerator number="5">0.193359</Numerator>
+        <Numerator number="6">0.225586</Numerator>
+        <Numerator number="7">0.193359</Numerator>
+        <Numerator number="8">0.12085</Numerator>
+        <Numerator number="9">0.0537109</Numerator>
+        <Numerator number="10">0.0161133</Numerator>
+        <Numerator number="11">0.00292969</Numerator>
+        <Numerator number="12">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>12800.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>4.6875E-4</Delay>
+        <Correction>4.6875E-4</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="6">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">0.00292969</Numerator>
+        <Numerator number="2">0.0161133</Numerator>
+        <Numerator number="3">0.0537109</Numerator>
+        <Numerator number="4">0.12085</Numerator>
+        <Numerator number="5">0.193359</Numerator>
+        <Numerator number="6">0.225586</Numerator>
+        <Numerator number="7">0.193359</Numerator>
+        <Numerator number="8">0.12085</Numerator>
+        <Numerator number="9">0.0537109</Numerator>
+        <Numerator number="10">0.0161133</Numerator>
+        <Numerator number="11">0.00292969</Numerator>
+        <Numerator number="12">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>6400.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>9.375E-4</Delay>
+        <Correction>9.375E-4</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="7">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">0.00292969</Numerator>
+        <Numerator number="2">0.0161133</Numerator>
+        <Numerator number="3">0.0537109</Numerator>
+        <Numerator number="4">0.12085</Numerator>
+        <Numerator number="5">0.193359</Numerator>
+        <Numerator number="6">0.225586</Numerator>
+        <Numerator number="7">0.193359</Numerator>
+        <Numerator number="8">0.12085</Numerator>
+        <Numerator number="9">0.0537109</Numerator>
+        <Numerator number="10">0.0161133</Numerator>
+        <Numerator number="11">0.00292969</Numerator>
+        <Numerator number="12">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>3200.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>0.001875</Delay>
+        <Correction>0.001875</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="8">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">0.00292969</Numerator>
+        <Numerator number="2">0.0161133</Numerator>
+        <Numerator number="3">0.0537109</Numerator>
+        <Numerator number="4">0.12085</Numerator>
+        <Numerator number="5">0.193359</Numerator>
+        <Numerator number="6">0.225586</Numerator>
+        <Numerator number="7">0.193359</Numerator>
+        <Numerator number="8">0.12085</Numerator>
+        <Numerator number="9">0.0537109</Numerator>
+        <Numerator number="10">0.0161133</Numerator>
+        <Numerator number="11">0.00292969</Numerator>
+        <Numerator number="12">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>1600.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>0.00375</Delay>
+        <Correction>0.00375</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="9">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">0.00292969</Numerator>
+        <Numerator number="2">0.0161133</Numerator>
+        <Numerator number="3">0.0537109</Numerator>
+        <Numerator number="4">0.12085</Numerator>
+        <Numerator number="5">0.193359</Numerator>
+        <Numerator number="6">0.225586</Numerator>
+        <Numerator number="7">0.193359</Numerator>
+        <Numerator number="8">0.12085</Numerator>
+        <Numerator number="9">0.0537109</Numerator>
+        <Numerator number="10">0.0161133</Numerator>
+        <Numerator number="11">0.00292969</Numerator>
+        <Numerator number="12">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>800.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0075</Delay>
+        <Correction>0.0075</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="10">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">-7.15032E-7</Numerator>
+        <Numerator number="1">-5.60109E-6</Numerator>
+        <Numerator number="2">-2.62179E-6</Numerator>
+        <Numerator number="3">-4.31403E-5</Numerator>
+        <Numerator number="4">-4.64771E-6</Numerator>
+        <Numerator number="5">1.43006E-6</Numerator>
+        <Numerator number="6">2.34769E-5</Numerator>
+        <Numerator number="7">1.43006E-6</Numerator>
+        <Numerator number="8">-5.27932E-5</Numerator>
+        <Numerator number="9">-3.66692E-4</Numerator>
+        <Numerator number="10">3.76107E-4</Numerator>
+        <Numerator number="11">8.54226E-4</Numerator>
+        <Numerator number="12">3.05081E-5</Numerator>
+        <Numerator number="13">-0.00127621</Numerator>
+        <Numerator number="14">-9.10951E-4</Numerator>
+        <Numerator number="15">0.00127669</Numerator>
+        <Numerator number="16">0.00215165</Numerator>
+        <Numerator number="17">-4.61554E-4</Numerator>
+        <Numerator number="18">-0.00333765</Numerator>
+        <Numerator number="19">-0.00140933</Numerator>
+        <Numerator number="20">0.00377072</Numerator>
+        <Numerator number="21">0.00419414</Numerator>
+        <Numerator number="22">-0.00264288</Numerator>
+        <Numerator number="23">-0.00720121</Numerator>
+        <Numerator number="24">-6.44006E-4</Numerator>
+        <Numerator number="25">0.009184</Numerator>
+        <Numerator number="26">0.00608445</Numerator>
+        <Numerator number="27">-0.00857824</Numerator>
+        <Numerator number="28">-0.0127401</Numerator>
+        <Numerator number="29">0.00398225</Numerator>
+        <Numerator number="30">0.0186261</Numerator>
+        <Numerator number="31">0.0052052</Numerator>
+        <Numerator number="32">-0.0209407</Numerator>
+        <Numerator number="33">-0.0181629</Numerator>
+        <Numerator number="34">0.0166669</Numerator>
+        <Numerator number="35">0.0322447</Numerator>
+        <Numerator number="36">-0.00346588</Numerator>
+        <Numerator number="37">-0.0429528</Numerator>
+        <Numerator number="38">-0.0193265</Numerator>
+        <Numerator number="39">0.044309</Numerator>
+        <Numerator number="40">0.0497909</Numerator>
+        <Numerator number="41">-0.0294164</Numerator>
+        <Numerator number="42">-0.0826078</Numerator>
+        <Numerator number="43">-0.00934166</Numerator>
+        <Numerator number="44">0.107552</Numerator>
+        <Numerator number="45">0.0816604</Numerator>
+        <Numerator number="46">-0.10311</Numerator>
+        <Numerator number="47">-0.204208</Numerator>
+        <Numerator number="48">-3.12231E-5</Numerator>
+        <Numerator number="49">0.390432</Numerator>
+        <Numerator number="50">0.589958</Numerator>
+        <Numerator number="51">0.390432</Numerator>
+        <Numerator number="52">-3.12231E-5</Numerator>
+        <Numerator number="53">-0.204208</Numerator>
+        <Numerator number="54">-0.10311</Numerator>
+        <Numerator number="55">0.0816604</Numerator>
+        <Numerator number="56">0.107552</Numerator>
+        <Numerator number="57">-0.00934166</Numerator>
+        <Numerator number="58">-0.0826078</Numerator>
+        <Numerator number="59">-0.0294164</Numerator>
+        <Numerator number="60">0.0497909</Numerator>
+        <Numerator number="61">0.044309</Numerator>
+        <Numerator number="62">-0.0193265</Numerator>
+        <Numerator number="63">-0.0429528</Numerator>
+        <Numerator number="64">-0.00346588</Numerator>
+        <Numerator number="65">0.0322447</Numerator>
+        <Numerator number="66">0.0166669</Numerator>
+        <Numerator number="67">-0.0181629</Numerator>
+        <Numerator number="68">-0.0209407</Numerator>
+        <Numerator number="69">0.0052052</Numerator>
+        <Numerator number="70">0.0186261</Numerator>
+        <Numerator number="71">0.00398225</Numerator>
+        <Numerator number="72">-0.0127401</Numerator>
+        <Numerator number="73">-0.00857824</Numerator>
+        <Numerator number="74">0.00608445</Numerator>
+        <Numerator number="75">0.009184</Numerator>
+        <Numerator number="76">-6.44006E-4</Numerator>
+        <Numerator number="77">-0.00720121</Numerator>
+        <Numerator number="78">-0.00264288</Numerator>
+        <Numerator number="79">0.00419414</Numerator>
+        <Numerator number="80">0.00377072</Numerator>
+        <Numerator number="81">-0.00140933</Numerator>
+        <Numerator number="82">-0.00333765</Numerator>
+        <Numerator number="83">-4.61554E-4</Numerator>
+        <Numerator number="84">0.00215165</Numerator>
+        <Numerator number="85">0.00127669</Numerator>
+        <Numerator number="86">-9.10951E-4</Numerator>
+        <Numerator number="87">-0.00127621</Numerator>
+        <Numerator number="88">3.05081E-5</Numerator>
+        <Numerator number="89">8.54226E-4</Numerator>
+        <Numerator number="90">3.76107E-4</Numerator>
+        <Numerator number="91">-3.66692E-4</Numerator>
+        <Numerator number="92">-4.1031E-4</Numerator>
+        <Numerator number="93">2.52645E-5</Numerator>
+        <Numerator number="94">2.61821E-4</Numerator>
+        <Numerator number="95">1.20602E-4</Numerator>
+        <Numerator number="96">-9.99854E-5</Numerator>
+        <Numerator number="97">-1.62312E-4</Numerator>
+        <Numerator number="98">-9.79595E-5</Numerator>
+        <Numerator number="99">-2.94355E-5</Numerator>
+        <Numerator number="100">-3.09847E-6</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>400.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>0.125</Delay>
+        <Correction>0.125</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="11">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">-1.09889E-5</Numerator>
+        <Numerator number="1">-1.99798E-5</Numerator>
+        <Numerator number="2">-3.29668E-5</Numerator>
+        <Numerator number="3">-4.39561E-5</Numerator>
+        <Numerator number="4">-4.79522E-5</Numerator>
+        <Numerator number="5">-4.09589E-5</Numerator>
+        <Numerator number="6">-1.8981E-5</Numerator>
+        <Numerator number="7">1.8981E-5</Numerator>
+        <Numerator number="8">6.7932E-5</Numerator>
+        <Numerator number="9">1.18881E-4</Numerator>
+        <Numerator number="10">1.58842E-4</Numerator>
+        <Numerator number="11">1.74826E-4</Numerator>
+        <Numerator number="12">1.57843E-4</Numerator>
+        <Numerator number="13">1.04895E-4</Numerator>
+        <Numerator number="14">2.49751E-5</Numerator>
+        <Numerator number="15">-6.49352E-5</Numerator>
+        <Numerator number="16">-1.4086E-4</Numerator>
+        <Numerator number="17">-1.78822E-4</Numerator>
+        <Numerator number="18">-1.6084E-4</Numerator>
+        <Numerator number="19">-8.59142E-5</Numerator>
+        <Numerator number="20">3.29668E-5</Numerator>
+        <Numerator number="21">1.63837E-4</Numerator>
+        <Numerator number="22">2.68733E-4</Numerator>
+        <Numerator number="23">3.10691E-4</Numerator>
+        <Numerator number="24">2.63737E-4</Numerator>
+        <Numerator number="25">1.3087E-4</Numerator>
+        <Numerator number="26">-6.09391E-5</Numerator>
+        <Numerator number="27">-2.6074E-4</Numerator>
+        <Numerator number="28">-4.08593E-4</Numerator>
+        <Numerator number="29">-4.48554E-4</Numerator>
+        <Numerator number="30">-3.53648E-4</Numerator>
+        <Numerator number="31">-1.35864E-4</Numerator>
+        <Numerator number="32">1.55845E-4</Numerator>
+        <Numerator number="33">4.38563E-4</Numerator>
+        <Numerator number="34">6.23379E-4</Numerator>
+        <Numerator number="35">6.38365E-4</Numerator>
+        <Numerator number="36">4.56546E-4</Numerator>
+        <Numerator number="37">1.08891E-4</Numerator>
+        <Numerator number="38">-3.15686E-4</Numerator>
+        <Numerator number="39">-6.94309E-4</Numerator>
+        <Numerator number="40">-9.03101E-4</Numerator>
+        <Numerator number="41">-8.5415E-4</Numerator>
+        <Numerator number="42">-5.33469E-4</Numerator>
+        <Numerator number="43">-7.99164E-6</Numerator>
+        <Numerator number="44">5.81421E-4</Numerator>
+        <Numerator number="45">0.00105695</Numerator>
+        <Numerator number="46">0.00125675</Numerator>
+        <Numerator number="47">0.00108792</Numerator>
+        <Numerator number="48">5.59443E-4</Numerator>
+        <Numerator number="49">-2.01799E-4</Numerator>
+        <Numerator number="50">-9.83021E-4</Numerator>
+        <Numerator number="51">-0.00154047</Numerator>
+        <Numerator number="52">-0.00167733</Numerator>
+        <Numerator number="53">-0.0013037</Numerator>
+        <Numerator number="54">-4.84518E-4</Numerator>
+        <Numerator number="55">5.71431E-4</Numerator>
+        <Numerator number="56">0.00155645</Numerator>
+        <Numerator number="57">0.00215685</Numerator>
+        <Numerator number="58">0.00214287</Numerator>
+        <Numerator number="59">0.00145855</Numerator>
+        <Numerator number="60">2.5075E-4</Numerator>
+        <Numerator number="61">-0.00115385</Numerator>
+        <Numerator number="62">-0.00233568</Numerator>
+        <Numerator number="63">-0.00290311</Numerator>
+        <Numerator number="64">-0.0026174</Numerator>
+        <Numerator number="65">-0.00148752</Numerator>
+        <Numerator number="66">2.15785E-4</Numerator>
+        <Numerator number="67">0.002014</Numerator>
+        <Numerator number="68">0.00335166</Numerator>
+        <Numerator number="69">0.00376825</Numerator>
+        <Numerator number="70">0.00304597</Numerator>
+        <Numerator number="71">0.0013037</Numerator>
+        <Numerator number="72">-0.001009</Numerator>
+        <Numerator number="73">-0.0032208</Numerator>
+        <Numerator number="74">-0.00463139</Numerator>
+        <Numerator number="75">-0.0047233</Numerator>
+        <Numerator number="76">-0.00334667</Numerator>
+        <Numerator number="77">-7.93211E-4</Numerator>
+        <Numerator number="78">0.00224477</Numerator>
+        <Numerator number="79">0.00486516</Numerator>
+        <Numerator number="80">0.00620583</Numerator>
+        <Numerator number="81">0.0057273</Numerator>
+        <Numerator number="82">0.00340861</Numerator>
+        <Numerator number="83">-1.99801E-4</Numerator>
+        <Numerator number="84">-0.00409193</Numerator>
+        <Numerator number="85">-0.00707596</Numerator>
+        <Numerator number="86">-0.00812791</Numerator>
+        <Numerator number="87">-0.00672831</Numerator>
+        <Numerator number="88">-0.00307194</Numerator>
+        <Numerator number="89">0.00192309</Numerator>
+        <Numerator number="90">0.00682721</Numerator>
+        <Numerator number="91">0.010091</Numerator>
+        <Numerator number="92">0.0105175</Numerator>
+        <Numerator number="93">0.00766437</Numerator>
+        <Numerator number="94">0.00206594</Numerator>
+        <Numerator number="95">-0.00483219</Numerator>
+        <Numerator number="96">-0.01101</Numerator>
+        <Numerator number="97">-0.0144376</Numerator>
+        <Numerator number="98">-0.0136934</Numerator>
+        <Numerator number="99">-0.00847457</Numerator>
+        <Numerator number="100">1.73827E-4</Numerator>
+        <Numerator number="101">0.010004</Numerator>
+        <Numerator number="102">0.018085</Numerator>
+        <Numerator number="103">0.0215935</Numerator>
+        <Numerator number="104">0.0186664</Numerator>
+        <Numerator number="105">0.00910094</Numerator>
+        <Numerator number="106">-0.0053287</Numerator>
+        <Numerator number="107">-0.0210541</Numerator>
+        <Numerator number="108">-0.0333958</Numerator>
+        <Numerator number="109">-0.0376226</Numerator>
+        <Numerator number="110">-0.030137</Numerator>
+        <Numerator number="111">-0.00949755</Numerator>
+        <Numerator number="112">0.0229931</Numerator>
+        <Numerator number="113">0.063304</Numerator>
+        <Numerator number="114">0.10534</Numerator>
+        <Numerator number="115">0.142124</Numerator>
+        <Numerator number="116">0.167226</Numerator>
+        <Numerator number="117">0.176134</Numerator>
+        <Numerator number="118">0.167226</Numerator>
+        <Numerator number="119">0.142124</Numerator>
+        <Numerator number="120">0.10534</Numerator>
+        <Numerator number="121">0.063304</Numerator>
+        <Numerator number="122">0.0229931</Numerator>
+        <Numerator number="123">-0.00949755</Numerator>
+        <Numerator number="124">-0.030137</Numerator>
+        <Numerator number="125">-0.0376226</Numerator>
+        <Numerator number="126">-0.0333958</Numerator>
+        <Numerator number="127">-0.0210541</Numerator>
+        <Numerator number="128">-0.0053287</Numerator>
+        <Numerator number="129">0.00910094</Numerator>
+        <Numerator number="130">0.0186664</Numerator>
+        <Numerator number="131">0.0215935</Numerator>
+        <Numerator number="132">0.018085</Numerator>
+        <Numerator number="133">0.010004</Numerator>
+        <Numerator number="134">1.73827E-4</Numerator>
+        <Numerator number="135">-0.00847457</Numerator>
+        <Numerator number="136">-0.0136934</Numerator>
+        <Numerator number="137">-0.0144376</Numerator>
+        <Numerator number="138">-0.01101</Numerator>
+        <Numerator number="139">-0.00483219</Numerator>
+        <Numerator number="140">0.00206594</Numerator>
+        <Numerator number="141">0.00766437</Numerator>
+        <Numerator number="142">0.0105175</Numerator>
+        <Numerator number="143">0.010091</Numerator>
+        <Numerator number="144">0.00682721</Numerator>
+        <Numerator number="145">0.00192309</Numerator>
+        <Numerator number="146">-0.00307194</Numerator>
+        <Numerator number="147">-0.00672831</Numerator>
+        <Numerator number="148">-0.00812791</Numerator>
+        <Numerator number="149">-0.00707596</Numerator>
+        <Numerator number="150">-0.00409193</Numerator>
+        <Numerator number="151">-1.99801E-4</Numerator>
+        <Numerator number="152">0.00340861</Numerator>
+        <Numerator number="153">0.0057273</Numerator>
+        <Numerator number="154">0.00620583</Numerator>
+        <Numerator number="155">0.00486516</Numerator>
+        <Numerator number="156">0.00224477</Numerator>
+        <Numerator number="157">-7.93211E-4</Numerator>
+        <Numerator number="158">-0.00334667</Numerator>
+        <Numerator number="159">-0.0047233</Numerator>
+        <Numerator number="160">-0.00463139</Numerator>
+        <Numerator number="161">-0.0032208</Numerator>
+        <Numerator number="162">-0.001009</Numerator>
+        <Numerator number="163">0.0013037</Numerator>
+        <Numerator number="164">0.00304597</Numerator>
+        <Numerator number="165">0.00376825</Numerator>
+        <Numerator number="166">0.00335166</Numerator>
+        <Numerator number="167">0.002014</Numerator>
+        <Numerator number="168">2.15785E-4</Numerator>
+        <Numerator number="169">-0.00148752</Numerator>
+        <Numerator number="170">-0.0026174</Numerator>
+        <Numerator number="171">-0.00290311</Numerator>
+        <Numerator number="172">-0.00233568</Numerator>
+        <Numerator number="173">-0.00115385</Numerator>
+        <Numerator number="174">2.5075E-4</Numerator>
+        <Numerator number="175">0.00145855</Numerator>
+        <Numerator number="176">0.00214287</Numerator>
+        <Numerator number="177">0.00215685</Numerator>
+        <Numerator number="178">0.00155645</Numerator>
+        <Numerator number="179">5.71431E-4</Numerator>
+        <Numerator number="180">-4.84518E-4</Numerator>
+        <Numerator number="181">-0.0013037</Numerator>
+        <Numerator number="182">-0.00167733</Numerator>
+        <Numerator number="183">-0.00154047</Numerator>
+        <Numerator number="184">-9.83021E-4</Numerator>
+        <Numerator number="185">-2.01799E-4</Numerator>
+        <Numerator number="186">5.59443E-4</Numerator>
+        <Numerator number="187">0.00108792</Numerator>
+        <Numerator number="188">0.00125675</Numerator>
+        <Numerator number="189">0.00105695</Numerator>
+        <Numerator number="190">5.81421E-4</Numerator>
+        <Numerator number="191">-7.99164E-6</Numerator>
+        <Numerator number="192">-5.33469E-4</Numerator>
+        <Numerator number="193">-8.5415E-4</Numerator>
+        <Numerator number="194">-9.03101E-4</Numerator>
+        <Numerator number="195">-6.94309E-4</Numerator>
+        <Numerator number="196">-3.15686E-4</Numerator>
+        <Numerator number="197">1.08891E-4</Numerator>
+        <Numerator number="198">4.56546E-4</Numerator>
+        <Numerator number="199">6.38365E-4</Numerator>
+        <Numerator number="200">6.23379E-4</Numerator>
+        <Numerator number="201">4.38563E-4</Numerator>
+        <Numerator number="202">1.55845E-4</Numerator>
+        <Numerator number="203">-1.35864E-4</Numerator>
+        <Numerator number="204">-3.53648E-4</Numerator>
+        <Numerator number="205">-4.48554E-4</Numerator>
+        <Numerator number="206">-4.08593E-4</Numerator>
+        <Numerator number="207">-2.6074E-4</Numerator>
+        <Numerator number="208">-6.09391E-5</Numerator>
+        <Numerator number="209">1.3087E-4</Numerator>
+        <Numerator number="210">2.63737E-4</Numerator>
+        <Numerator number="211">3.10691E-4</Numerator>
+        <Numerator number="212">2.68733E-4</Numerator>
+        <Numerator number="213">1.63837E-4</Numerator>
+        <Numerator number="214">3.29668E-5</Numerator>
+        <Numerator number="215">-8.59142E-5</Numerator>
+        <Numerator number="216">-1.6084E-4</Numerator>
+        <Numerator number="217">-1.78822E-4</Numerator>
+        <Numerator number="218">-1.4086E-4</Numerator>
+        <Numerator number="219">-6.49352E-5</Numerator>
+        <Numerator number="220">2.49751E-5</Numerator>
+        <Numerator number="221">1.04895E-4</Numerator>
+        <Numerator number="222">1.57843E-4</Numerator>
+        <Numerator number="223">1.74826E-4</Numerator>
+        <Numerator number="224">1.58842E-4</Numerator>
+        <Numerator number="225">1.18881E-4</Numerator>
+        <Numerator number="226">6.7932E-5</Numerator>
+        <Numerator number="227">1.8981E-5</Numerator>
+        <Numerator number="228">-1.8981E-5</Numerator>
+        <Numerator number="229">-4.09589E-5</Numerator>
+        <Numerator number="230">-4.79522E-5</Numerator>
+        <Numerator number="231">-4.39561E-5</Numerator>
+        <Numerator number="232">-3.29668E-5</Numerator>
+        <Numerator number="233">-1.99798E-5</Numerator>
+        <Numerator number="234">-1.09889E-5</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>200.0</InputSampleRate>
+        <Factor>5</Factor>
+        <Offset>0</Offset>
+        <Delay>0.585</Delay>
+        <Correction>0.585</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+     </Response>
+    </Channel>
+    <Channel code="BHZ" locationCode="" startDate="2010-03-23T18:00:00" endDate="2012-02-01T00:00:00" restrictedStatus="open">
+     <Latitude>42.3848</Latitude>
+     <Longitude>-71.3218</Longitude>
+     <Elevation>60</Elevation>
+     <Depth>0</Depth>
+     <Azimuth>0</Azimuth>
+     <Dip>-90</Dip>
+     <SampleRate>4E01</SampleRate>
+     <ClockDrift>2.5E-04</ClockDrift>
+     <CalibrationUnits>
+      <Name>V</Name>
+      <Description>emf in volts</Description>
+     </CalibrationUnits>
+     <Sensor>
+      <Description>Trillium 120P, 120 s, 1201 V/m/s-RT130, gain 1, 40</Description>
+     </Sensor>
+     <Response>
+     <InstrumentSensitivity>
+       <Value>7.51485E8</Value>
+       <Frequency>0.05</Frequency>
+       <InputUnits>
+         <Name>m/s</Name>
+         <Description>Velocity in Meters Per Second</Description>
+       </InputUnits>
+       <OutputUnits>
+         <Name>counts</Name>
+         <Description>Digital Counts</Description>
+       </OutputUnits>
+     </InstrumentSensitivity>
+      <Stage number="1">
+      <PolesZeros>
+        <InputUnits>
+          <Name>m/s</Name>
+          <Description>Velocity in Meters Per Second</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>V</Name>
+          <Description>Volts</Description>
+        </OutputUnits>
+        <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+        <NormalizationFactor>308000.0</NormalizationFactor>
+        <NormalizationFrequency>1.0</NormalizationFrequency>
+        <Zero number="0">
+          <Real>0.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="1">
+          <Real>0.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="2">
+          <Real>-90.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="3">
+          <Real>-160.7</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="4">
+          <Real>-3108.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Pole number="0">
+          <Real>-0.03852</Real>
+          <Imaginary>-0.03658</Imaginary>
+        </Pole>
+        <Pole number="1">
+          <Real>-0.03852</Real>
+          <Imaginary>0.03658</Imaginary>
+        </Pole>
+        <Pole number="2">
+          <Real>-178.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Pole>
+        <Pole number="3">
+          <Real>-135.0</Real>
+          <Imaginary>-160.0</Imaginary>
+        </Pole>
+        <Pole number="4">
+          <Real>-135.0</Real>
+          <Imaginary>160.0</Imaginary>
+        </Pole>
+        <Pole number="5">
+          <Real>-671.0</Real>
+          <Imaginary>-1154.0</Imaginary>
+        </Pole>
+        <Pole number="6">
+          <Real>-671.0</Real>
+          <Imaginary>1154.0</Imaginary>
+        </Pole>
+      </PolesZeros>
+      <Decimation>
+        <InputSampleRate>102400.0</InputSampleRate>
+        <Factor>1</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0</Delay>
+        <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1200.0</Value>
+        <Frequency>1.0</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="2">
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="3">
+      <Coefficients>
+        <InputUnits>
+          <Name>V</Name>
+          <Description>Volts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">1.0</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>102400.0</InputSampleRate>
+        <Factor>1</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0</Delay>
+        <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>629129.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="4">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">9.76562E-4</Numerator>
+        <Numerator number="2">0.00244141</Numerator>
+        <Numerator number="3">0.00488281</Numerator>
+        <Numerator number="4">0.00854492</Numerator>
+        <Numerator number="5">0.0136719</Numerator>
+        <Numerator number="6">0.0205078</Numerator>
+        <Numerator number="7">0.0292969</Numerator>
+        <Numerator number="8">0.0393066</Numerator>
+        <Numerator number="9">0.0498047</Numerator>
+        <Numerator number="10">0.0600586</Numerator>
+        <Numerator number="11">0.0693359</Numerator>
+        <Numerator number="12">0.0769043</Numerator>
+        <Numerator number="13">0.0820312</Numerator>
+        <Numerator number="14">0.0839844</Numerator>
+        <Numerator number="15">0.0820312</Numerator>
+        <Numerator number="16">0.0769043</Numerator>
+        <Numerator number="17">0.0693359</Numerator>
+        <Numerator number="18">0.0600586</Numerator>
+        <Numerator number="19">0.0498047</Numerator>
+        <Numerator number="20">0.0393066</Numerator>
+        <Numerator number="21">0.0292969</Numerator>
+        <Numerator number="22">0.0205078</Numerator>
+        <Numerator number="23">0.0136719</Numerator>
+        <Numerator number="24">0.00854492</Numerator>
+        <Numerator number="25">0.00488281</Numerator>
+        <Numerator number="26">0.00244141</Numerator>
+        <Numerator number="27">9.76562E-4</Numerator>
+        <Numerator number="28">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>102400.0</InputSampleRate>
+        <Factor>8</Factor>
+        <Offset>0</Offset>
+        <Delay>1.3672E-4</Delay>
+        <Correction>1.3672E-4</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="5">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">0.00292969</Numerator>
+        <Numerator number="2">0.0161133</Numerator>
+        <Numerator number="3">0.0537109</Numerator>
+        <Numerator number="4">0.12085</Numerator>
+        <Numerator number="5">0.193359</Numerator>
+        <Numerator number="6">0.225586</Numerator>
+        <Numerator number="7">0.193359</Numerator>
+        <Numerator number="8">0.12085</Numerator>
+        <Numerator number="9">0.0537109</Numerator>
+        <Numerator number="10">0.0161133</Numerator>
+        <Numerator number="11">0.00292969</Numerator>
+        <Numerator number="12">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>12800.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>4.6875E-4</Delay>
+        <Correction>4.6875E-4</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="6">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">0.00292969</Numerator>
+        <Numerator number="2">0.0161133</Numerator>
+        <Numerator number="3">0.0537109</Numerator>
+        <Numerator number="4">0.12085</Numerator>
+        <Numerator number="5">0.193359</Numerator>
+        <Numerator number="6">0.225586</Numerator>
+        <Numerator number="7">0.193359</Numerator>
+        <Numerator number="8">0.12085</Numerator>
+        <Numerator number="9">0.0537109</Numerator>
+        <Numerator number="10">0.0161133</Numerator>
+        <Numerator number="11">0.00292969</Numerator>
+        <Numerator number="12">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>6400.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>9.375E-4</Delay>
+        <Correction>9.375E-4</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="7">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">0.00292969</Numerator>
+        <Numerator number="2">0.0161133</Numerator>
+        <Numerator number="3">0.0537109</Numerator>
+        <Numerator number="4">0.12085</Numerator>
+        <Numerator number="5">0.193359</Numerator>
+        <Numerator number="6">0.225586</Numerator>
+        <Numerator number="7">0.193359</Numerator>
+        <Numerator number="8">0.12085</Numerator>
+        <Numerator number="9">0.0537109</Numerator>
+        <Numerator number="10">0.0161133</Numerator>
+        <Numerator number="11">0.00292969</Numerator>
+        <Numerator number="12">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>3200.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>0.001875</Delay>
+        <Correction>0.001875</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="8">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">0.00292969</Numerator>
+        <Numerator number="2">0.0161133</Numerator>
+        <Numerator number="3">0.0537109</Numerator>
+        <Numerator number="4">0.12085</Numerator>
+        <Numerator number="5">0.193359</Numerator>
+        <Numerator number="6">0.225586</Numerator>
+        <Numerator number="7">0.193359</Numerator>
+        <Numerator number="8">0.12085</Numerator>
+        <Numerator number="9">0.0537109</Numerator>
+        <Numerator number="10">0.0161133</Numerator>
+        <Numerator number="11">0.00292969</Numerator>
+        <Numerator number="12">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>1600.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>0.00375</Delay>
+        <Correction>0.00375</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="9">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">2.44141E-4</Numerator>
+        <Numerator number="1">0.00292969</Numerator>
+        <Numerator number="2">0.0161133</Numerator>
+        <Numerator number="3">0.0537109</Numerator>
+        <Numerator number="4">0.12085</Numerator>
+        <Numerator number="5">0.193359</Numerator>
+        <Numerator number="6">0.225586</Numerator>
+        <Numerator number="7">0.193359</Numerator>
+        <Numerator number="8">0.12085</Numerator>
+        <Numerator number="9">0.0537109</Numerator>
+        <Numerator number="10">0.0161133</Numerator>
+        <Numerator number="11">0.00292969</Numerator>
+        <Numerator number="12">2.44141E-4</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>800.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0075</Delay>
+        <Correction>0.0075</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="10">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">-7.15032E-7</Numerator>
+        <Numerator number="1">-5.60109E-6</Numerator>
+        <Numerator number="2">-2.62179E-6</Numerator>
+        <Numerator number="3">-4.31403E-5</Numerator>
+        <Numerator number="4">-4.64771E-6</Numerator>
+        <Numerator number="5">1.43006E-6</Numerator>
+        <Numerator number="6">2.34769E-5</Numerator>
+        <Numerator number="7">1.43006E-6</Numerator>
+        <Numerator number="8">-5.27932E-5</Numerator>
+        <Numerator number="9">-3.66692E-4</Numerator>
+        <Numerator number="10">3.76107E-4</Numerator>
+        <Numerator number="11">8.54226E-4</Numerator>
+        <Numerator number="12">3.05081E-5</Numerator>
+        <Numerator number="13">-0.00127621</Numerator>
+        <Numerator number="14">-9.10951E-4</Numerator>
+        <Numerator number="15">0.00127669</Numerator>
+        <Numerator number="16">0.00215165</Numerator>
+        <Numerator number="17">-4.61554E-4</Numerator>
+        <Numerator number="18">-0.00333765</Numerator>
+        <Numerator number="19">-0.00140933</Numerator>
+        <Numerator number="20">0.00377072</Numerator>
+        <Numerator number="21">0.00419414</Numerator>
+        <Numerator number="22">-0.00264288</Numerator>
+        <Numerator number="23">-0.00720121</Numerator>
+        <Numerator number="24">-6.44006E-4</Numerator>
+        <Numerator number="25">0.009184</Numerator>
+        <Numerator number="26">0.00608445</Numerator>
+        <Numerator number="27">-0.00857824</Numerator>
+        <Numerator number="28">-0.0127401</Numerator>
+        <Numerator number="29">0.00398225</Numerator>
+        <Numerator number="30">0.0186261</Numerator>
+        <Numerator number="31">0.0052052</Numerator>
+        <Numerator number="32">-0.0209407</Numerator>
+        <Numerator number="33">-0.0181629</Numerator>
+        <Numerator number="34">0.0166669</Numerator>
+        <Numerator number="35">0.0322447</Numerator>
+        <Numerator number="36">-0.00346588</Numerator>
+        <Numerator number="37">-0.0429528</Numerator>
+        <Numerator number="38">-0.0193265</Numerator>
+        <Numerator number="39">0.044309</Numerator>
+        <Numerator number="40">0.0497909</Numerator>
+        <Numerator number="41">-0.0294164</Numerator>
+        <Numerator number="42">-0.0826078</Numerator>
+        <Numerator number="43">-0.00934166</Numerator>
+        <Numerator number="44">0.107552</Numerator>
+        <Numerator number="45">0.0816604</Numerator>
+        <Numerator number="46">-0.10311</Numerator>
+        <Numerator number="47">-0.204208</Numerator>
+        <Numerator number="48">-3.12231E-5</Numerator>
+        <Numerator number="49">0.390432</Numerator>
+        <Numerator number="50">0.589958</Numerator>
+        <Numerator number="51">0.390432</Numerator>
+        <Numerator number="52">-3.12231E-5</Numerator>
+        <Numerator number="53">-0.204208</Numerator>
+        <Numerator number="54">-0.10311</Numerator>
+        <Numerator number="55">0.0816604</Numerator>
+        <Numerator number="56">0.107552</Numerator>
+        <Numerator number="57">-0.00934166</Numerator>
+        <Numerator number="58">-0.0826078</Numerator>
+        <Numerator number="59">-0.0294164</Numerator>
+        <Numerator number="60">0.0497909</Numerator>
+        <Numerator number="61">0.044309</Numerator>
+        <Numerator number="62">-0.0193265</Numerator>
+        <Numerator number="63">-0.0429528</Numerator>
+        <Numerator number="64">-0.00346588</Numerator>
+        <Numerator number="65">0.0322447</Numerator>
+        <Numerator number="66">0.0166669</Numerator>
+        <Numerator number="67">-0.0181629</Numerator>
+        <Numerator number="68">-0.0209407</Numerator>
+        <Numerator number="69">0.0052052</Numerator>
+        <Numerator number="70">0.0186261</Numerator>
+        <Numerator number="71">0.00398225</Numerator>
+        <Numerator number="72">-0.0127401</Numerator>
+        <Numerator number="73">-0.00857824</Numerator>
+        <Numerator number="74">0.00608445</Numerator>
+        <Numerator number="75">0.009184</Numerator>
+        <Numerator number="76">-6.44006E-4</Numerator>
+        <Numerator number="77">-0.00720121</Numerator>
+        <Numerator number="78">-0.00264288</Numerator>
+        <Numerator number="79">0.00419414</Numerator>
+        <Numerator number="80">0.00377072</Numerator>
+        <Numerator number="81">-0.00140933</Numerator>
+        <Numerator number="82">-0.00333765</Numerator>
+        <Numerator number="83">-4.61554E-4</Numerator>
+        <Numerator number="84">0.00215165</Numerator>
+        <Numerator number="85">0.00127669</Numerator>
+        <Numerator number="86">-9.10951E-4</Numerator>
+        <Numerator number="87">-0.00127621</Numerator>
+        <Numerator number="88">3.05081E-5</Numerator>
+        <Numerator number="89">8.54226E-4</Numerator>
+        <Numerator number="90">3.76107E-4</Numerator>
+        <Numerator number="91">-3.66692E-4</Numerator>
+        <Numerator number="92">-4.1031E-4</Numerator>
+        <Numerator number="93">2.52645E-5</Numerator>
+        <Numerator number="94">2.61821E-4</Numerator>
+        <Numerator number="95">1.20602E-4</Numerator>
+        <Numerator number="96">-9.99854E-5</Numerator>
+        <Numerator number="97">-1.62312E-4</Numerator>
+        <Numerator number="98">-9.79595E-5</Numerator>
+        <Numerator number="99">-2.94355E-5</Numerator>
+        <Numerator number="100">-3.09847E-6</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>400.0</InputSampleRate>
+        <Factor>2</Factor>
+        <Offset>0</Offset>
+        <Delay>0.125</Delay>
+        <Correction>0.125</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="11">
+      <Coefficients>
+        <InputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+        <Numerator number="0">-1.09889E-5</Numerator>
+        <Numerator number="1">-1.99798E-5</Numerator>
+        <Numerator number="2">-3.29668E-5</Numerator>
+        <Numerator number="3">-4.39561E-5</Numerator>
+        <Numerator number="4">-4.79522E-5</Numerator>
+        <Numerator number="5">-4.09589E-5</Numerator>
+        <Numerator number="6">-1.8981E-5</Numerator>
+        <Numerator number="7">1.8981E-5</Numerator>
+        <Numerator number="8">6.7932E-5</Numerator>
+        <Numerator number="9">1.18881E-4</Numerator>
+        <Numerator number="10">1.58842E-4</Numerator>
+        <Numerator number="11">1.74826E-4</Numerator>
+        <Numerator number="12">1.57843E-4</Numerator>
+        <Numerator number="13">1.04895E-4</Numerator>
+        <Numerator number="14">2.49751E-5</Numerator>
+        <Numerator number="15">-6.49352E-5</Numerator>
+        <Numerator number="16">-1.4086E-4</Numerator>
+        <Numerator number="17">-1.78822E-4</Numerator>
+        <Numerator number="18">-1.6084E-4</Numerator>
+        <Numerator number="19">-8.59142E-5</Numerator>
+        <Numerator number="20">3.29668E-5</Numerator>
+        <Numerator number="21">1.63837E-4</Numerator>
+        <Numerator number="22">2.68733E-4</Numerator>
+        <Numerator number="23">3.10691E-4</Numerator>
+        <Numerator number="24">2.63737E-4</Numerator>
+        <Numerator number="25">1.3087E-4</Numerator>
+        <Numerator number="26">-6.09391E-5</Numerator>
+        <Numerator number="27">-2.6074E-4</Numerator>
+        <Numerator number="28">-4.08593E-4</Numerator>
+        <Numerator number="29">-4.48554E-4</Numerator>
+        <Numerator number="30">-3.53648E-4</Numerator>
+        <Numerator number="31">-1.35864E-4</Numerator>
+        <Numerator number="32">1.55845E-4</Numerator>
+        <Numerator number="33">4.38563E-4</Numerator>
+        <Numerator number="34">6.23379E-4</Numerator>
+        <Numerator number="35">6.38365E-4</Numerator>
+        <Numerator number="36">4.56546E-4</Numerator>
+        <Numerator number="37">1.08891E-4</Numerator>
+        <Numerator number="38">-3.15686E-4</Numerator>
+        <Numerator number="39">-6.94309E-4</Numerator>
+        <Numerator number="40">-9.03101E-4</Numerator>
+        <Numerator number="41">-8.5415E-4</Numerator>
+        <Numerator number="42">-5.33469E-4</Numerator>
+        <Numerator number="43">-7.99164E-6</Numerator>
+        <Numerator number="44">5.81421E-4</Numerator>
+        <Numerator number="45">0.00105695</Numerator>
+        <Numerator number="46">0.00125675</Numerator>
+        <Numerator number="47">0.00108792</Numerator>
+        <Numerator number="48">5.59443E-4</Numerator>
+        <Numerator number="49">-2.01799E-4</Numerator>
+        <Numerator number="50">-9.83021E-4</Numerator>
+        <Numerator number="51">-0.00154047</Numerator>
+        <Numerator number="52">-0.00167733</Numerator>
+        <Numerator number="53">-0.0013037</Numerator>
+        <Numerator number="54">-4.84518E-4</Numerator>
+        <Numerator number="55">5.71431E-4</Numerator>
+        <Numerator number="56">0.00155645</Numerator>
+        <Numerator number="57">0.00215685</Numerator>
+        <Numerator number="58">0.00214287</Numerator>
+        <Numerator number="59">0.00145855</Numerator>
+        <Numerator number="60">2.5075E-4</Numerator>
+        <Numerator number="61">-0.00115385</Numerator>
+        <Numerator number="62">-0.00233568</Numerator>
+        <Numerator number="63">-0.00290311</Numerator>
+        <Numerator number="64">-0.0026174</Numerator>
+        <Numerator number="65">-0.00148752</Numerator>
+        <Numerator number="66">2.15785E-4</Numerator>
+        <Numerator number="67">0.002014</Numerator>
+        <Numerator number="68">0.00335166</Numerator>
+        <Numerator number="69">0.00376825</Numerator>
+        <Numerator number="70">0.00304597</Numerator>
+        <Numerator number="71">0.0013037</Numerator>
+        <Numerator number="72">-0.001009</Numerator>
+        <Numerator number="73">-0.0032208</Numerator>
+        <Numerator number="74">-0.00463139</Numerator>
+        <Numerator number="75">-0.0047233</Numerator>
+        <Numerator number="76">-0.00334667</Numerator>
+        <Numerator number="77">-7.93211E-4</Numerator>
+        <Numerator number="78">0.00224477</Numerator>
+        <Numerator number="79">0.00486516</Numerator>
+        <Numerator number="80">0.00620583</Numerator>
+        <Numerator number="81">0.0057273</Numerator>
+        <Numerator number="82">0.00340861</Numerator>
+        <Numerator number="83">-1.99801E-4</Numerator>
+        <Numerator number="84">-0.00409193</Numerator>
+        <Numerator number="85">-0.00707596</Numerator>
+        <Numerator number="86">-0.00812791</Numerator>
+        <Numerator number="87">-0.00672831</Numerator>
+        <Numerator number="88">-0.00307194</Numerator>
+        <Numerator number="89">0.00192309</Numerator>
+        <Numerator number="90">0.00682721</Numerator>
+        <Numerator number="91">0.010091</Numerator>
+        <Numerator number="92">0.0105175</Numerator>
+        <Numerator number="93">0.00766437</Numerator>
+        <Numerator number="94">0.00206594</Numerator>
+        <Numerator number="95">-0.00483219</Numerator>
+        <Numerator number="96">-0.01101</Numerator>
+        <Numerator number="97">-0.0144376</Numerator>
+        <Numerator number="98">-0.0136934</Numerator>
+        <Numerator number="99">-0.00847457</Numerator>
+        <Numerator number="100">1.73827E-4</Numerator>
+        <Numerator number="101">0.010004</Numerator>
+        <Numerator number="102">0.018085</Numerator>
+        <Numerator number="103">0.0215935</Numerator>
+        <Numerator number="104">0.0186664</Numerator>
+        <Numerator number="105">0.00910094</Numerator>
+        <Numerator number="106">-0.0053287</Numerator>
+        <Numerator number="107">-0.0210541</Numerator>
+        <Numerator number="108">-0.0333958</Numerator>
+        <Numerator number="109">-0.0376226</Numerator>
+        <Numerator number="110">-0.030137</Numerator>
+        <Numerator number="111">-0.00949755</Numerator>
+        <Numerator number="112">0.0229931</Numerator>
+        <Numerator number="113">0.063304</Numerator>
+        <Numerator number="114">0.10534</Numerator>
+        <Numerator number="115">0.142124</Numerator>
+        <Numerator number="116">0.167226</Numerator>
+        <Numerator number="117">0.176134</Numerator>
+        <Numerator number="118">0.167226</Numerator>
+        <Numerator number="119">0.142124</Numerator>
+        <Numerator number="120">0.10534</Numerator>
+        <Numerator number="121">0.063304</Numerator>
+        <Numerator number="122">0.0229931</Numerator>
+        <Numerator number="123">-0.00949755</Numerator>
+        <Numerator number="124">-0.030137</Numerator>
+        <Numerator number="125">-0.0376226</Numerator>
+        <Numerator number="126">-0.0333958</Numerator>
+        <Numerator number="127">-0.0210541</Numerator>
+        <Numerator number="128">-0.0053287</Numerator>
+        <Numerator number="129">0.00910094</Numerator>
+        <Numerator number="130">0.0186664</Numerator>
+        <Numerator number="131">0.0215935</Numerator>
+        <Numerator number="132">0.018085</Numerator>
+        <Numerator number="133">0.010004</Numerator>
+        <Numerator number="134">1.73827E-4</Numerator>
+        <Numerator number="135">-0.00847457</Numerator>
+        <Numerator number="136">-0.0136934</Numerator>
+        <Numerator number="137">-0.0144376</Numerator>
+        <Numerator number="138">-0.01101</Numerator>
+        <Numerator number="139">-0.00483219</Numerator>
+        <Numerator number="140">0.00206594</Numerator>
+        <Numerator number="141">0.00766437</Numerator>
+        <Numerator number="142">0.0105175</Numerator>
+        <Numerator number="143">0.010091</Numerator>
+        <Numerator number="144">0.00682721</Numerator>
+        <Numerator number="145">0.00192309</Numerator>
+        <Numerator number="146">-0.00307194</Numerator>
+        <Numerator number="147">-0.00672831</Numerator>
+        <Numerator number="148">-0.00812791</Numerator>
+        <Numerator number="149">-0.00707596</Numerator>
+        <Numerator number="150">-0.00409193</Numerator>
+        <Numerator number="151">-1.99801E-4</Numerator>
+        <Numerator number="152">0.00340861</Numerator>
+        <Numerator number="153">0.0057273</Numerator>
+        <Numerator number="154">0.00620583</Numerator>
+        <Numerator number="155">0.00486516</Numerator>
+        <Numerator number="156">0.00224477</Numerator>
+        <Numerator number="157">-7.93211E-4</Numerator>
+        <Numerator number="158">-0.00334667</Numerator>
+        <Numerator number="159">-0.0047233</Numerator>
+        <Numerator number="160">-0.00463139</Numerator>
+        <Numerator number="161">-0.0032208</Numerator>
+        <Numerator number="162">-0.001009</Numerator>
+        <Numerator number="163">0.0013037</Numerator>
+        <Numerator number="164">0.00304597</Numerator>
+        <Numerator number="165">0.00376825</Numerator>
+        <Numerator number="166">0.00335166</Numerator>
+        <Numerator number="167">0.002014</Numerator>
+        <Numerator number="168">2.15785E-4</Numerator>
+        <Numerator number="169">-0.00148752</Numerator>
+        <Numerator number="170">-0.0026174</Numerator>
+        <Numerator number="171">-0.00290311</Numerator>
+        <Numerator number="172">-0.00233568</Numerator>
+        <Numerator number="173">-0.00115385</Numerator>
+        <Numerator number="174">2.5075E-4</Numerator>
+        <Numerator number="175">0.00145855</Numerator>
+        <Numerator number="176">0.00214287</Numerator>
+        <Numerator number="177">0.00215685</Numerator>
+        <Numerator number="178">0.00155645</Numerator>
+        <Numerator number="179">5.71431E-4</Numerator>
+        <Numerator number="180">-4.84518E-4</Numerator>
+        <Numerator number="181">-0.0013037</Numerator>
+        <Numerator number="182">-0.00167733</Numerator>
+        <Numerator number="183">-0.00154047</Numerator>
+        <Numerator number="184">-9.83021E-4</Numerator>
+        <Numerator number="185">-2.01799E-4</Numerator>
+        <Numerator number="186">5.59443E-4</Numerator>
+        <Numerator number="187">0.00108792</Numerator>
+        <Numerator number="188">0.00125675</Numerator>
+        <Numerator number="189">0.00105695</Numerator>
+        <Numerator number="190">5.81421E-4</Numerator>
+        <Numerator number="191">-7.99164E-6</Numerator>
+        <Numerator number="192">-5.33469E-4</Numerator>
+        <Numerator number="193">-8.5415E-4</Numerator>
+        <Numerator number="194">-9.03101E-4</Numerator>
+        <Numerator number="195">-6.94309E-4</Numerator>
+        <Numerator number="196">-3.15686E-4</Numerator>
+        <Numerator number="197">1.08891E-4</Numerator>
+        <Numerator number="198">4.56546E-4</Numerator>
+        <Numerator number="199">6.38365E-4</Numerator>
+        <Numerator number="200">6.23379E-4</Numerator>
+        <Numerator number="201">4.38563E-4</Numerator>
+        <Numerator number="202">1.55845E-4</Numerator>
+        <Numerator number="203">-1.35864E-4</Numerator>
+        <Numerator number="204">-3.53648E-4</Numerator>
+        <Numerator number="205">-4.48554E-4</Numerator>
+        <Numerator number="206">-4.08593E-4</Numerator>
+        <Numerator number="207">-2.6074E-4</Numerator>
+        <Numerator number="208">-6.09391E-5</Numerator>
+        <Numerator number="209">1.3087E-4</Numerator>
+        <Numerator number="210">2.63737E-4</Numerator>
+        <Numerator number="211">3.10691E-4</Numerator>
+        <Numerator number="212">2.68733E-4</Numerator>
+        <Numerator number="213">1.63837E-4</Numerator>
+        <Numerator number="214">3.29668E-5</Numerator>
+        <Numerator number="215">-8.59142E-5</Numerator>
+        <Numerator number="216">-1.6084E-4</Numerator>
+        <Numerator number="217">-1.78822E-4</Numerator>
+        <Numerator number="218">-1.4086E-4</Numerator>
+        <Numerator number="219">-6.49352E-5</Numerator>
+        <Numerator number="220">2.49751E-5</Numerator>
+        <Numerator number="221">1.04895E-4</Numerator>
+        <Numerator number="222">1.57843E-4</Numerator>
+        <Numerator number="223">1.74826E-4</Numerator>
+        <Numerator number="224">1.58842E-4</Numerator>
+        <Numerator number="225">1.18881E-4</Numerator>
+        <Numerator number="226">6.7932E-5</Numerator>
+        <Numerator number="227">1.8981E-5</Numerator>
+        <Numerator number="228">-1.8981E-5</Numerator>
+        <Numerator number="229">-4.09589E-5</Numerator>
+        <Numerator number="230">-4.79522E-5</Numerator>
+        <Numerator number="231">-4.39561E-5</Numerator>
+        <Numerator number="232">-3.29668E-5</Numerator>
+        <Numerator number="233">-1.99798E-5</Numerator>
+        <Numerator number="234">-1.09889E-5</Numerator>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>200.0</InputSampleRate>
+        <Factor>5</Factor>
+        <Offset>0</Offset>
+        <Delay>0.585</Delay>
+        <Correction>0.585</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>0.05</Frequency>
+      </StageGain>
+
+      </Stage>
+     </Response>
+    </Channel>
+   </Station>
+  </Network>
+ </FDSNStationXML>

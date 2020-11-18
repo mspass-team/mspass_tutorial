@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?><FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.1" xsi:schemaLocation="http://www.fdsn.org/xml/station/1 http://www.fdsn.org/xml/station/fdsn-station-1.1.xsd">
+ <Source>NCEDC</Source>
+ <Sender>NCEDC</Sender>
+ <Module>NCEDC WEB SERVICE: fdsnws-station | version: 1.1</Module>
+ <ModuleURI>http://service.ncedc.org/fdsnws/station/1/query?net=BK&amp;sta=OXMT&amp;cha=BHZ&amp;loc=00&amp;start=2012-12-31T08:46:20.000-08:00&amp;end=2012-12-31T09:46:20.000-08:00&amp;level=resp</ModuleURI>
+ <Created>2020-10-16T14:05:53</Created>
+ <Network code="BK" startDate="1980-10-01T00:00:00" endDate="3000-01-01T00:00:00">
+  <Description>Berkeley Digital Seismic Network (BDSN)</Description>
+  <TotalNumberStations>121</TotalNumberStations>
+  <SelectedNumberStations>1</SelectedNumberStations>
+  <Station code="OXMT" endDate="3000-01-01T00:00:00" startDate="2003-12-20T00:10:00">
+   <Latitude>37.49936</Latitude>
+   <Longitude>-122.42431</Longitude>
+   <Elevation>209.1</Elevation>
+   <Site>
+    <Name>Ox Mountain, CA, USA</Name>
+   </Site>
+   <CreationDate>2003-12-20T00:10:00</CreationDate>
+   <Channel code="BHE" endDate="2014-02-18T23:09:00" locationCode="00" startDate="2012-08-28T20:00:00">
+    <Latitude>37.49936</Latitude>
+    <Longitude>-122.42431</Longitude>
+    <Elevation>209.1</Elevation>
+    <Depth>0.0</Depth>
+    <Azimuth>0.0</Azimuth>
+    <Dip>0.0</Dip>
+    <Type>CONTINUOUS</Type>
+    <Type>GEOPHYSICAL</Type>
+    <SampleRate>40.0</SampleRate>
+    <ClockDrift>0.002</ClockDrift>
+    <CalibrationUnits>
+     <Name>A</Name>
+     <Description>Amperes</Description>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Streckeisen STS-2 VBB Tri-Axial Seismometer</Description>
+    </Sensor>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>2.5316818944E9</Value>
+      <Frequency>1.0</Frequency>
+      <InputUnits>
+       <Name>M/S</Name>
+       <Description>Velocity in Meters Per Second</Description>
+      </InputUnits>
+      <OutputUnits>
+       <Name>COUNTS</Name>
+       <Description>Digital Counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <PolesZeros>
+       <InputUnits>
+        <Name>M/S</Name>
+        <Description>Velocity in Meters Per Second</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>V</Name>
+        <Description>Volts</Description>
+       </OutputUnits>
+       <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+       <NormalizationFactor>10118549294094300000</NormalizationFactor>
+       <NormalizationFrequency>1</NormalizationFrequency>
+       <Zero number="0">
+        <Real>-461.81412</Real>
+        <Imaginary>429.078725</Imaginary>
+       </Zero>
+       <Zero number="1">
+        <Real>-461.81412</Real>
+        <Imaginary>-429.078725</Imaginary>
+       </Zero>
+       <Zero number="2">
+        <Real>-206.318862</Real>
+        <Imaginary>0</Imaginary>
+       </Zero>
+       <Zero number="3">
+        <Real>-15.14876</Real>
+        <Imaginary>0</Imaginary>
+       </Zero>
+       <Zero number="4">
+        <Real>0</Real>
+        <Imaginary>0</Imaginary>
+       </Zero>
+       <Zero number="5">
+        <Real>0</Real>
+        <Imaginary>0</Imaginary>
+       </Zero>
+       <Pole number="0">
+        <Real>-10239.707095</Real>
+        <Imaginary>2725.017468</Imaginary>
+       </Pole>
+       <Pole number="1">
+        <Real>-10239.707095</Real>
+        <Imaginary>-2725.017468</Imaginary>
+       </Pole>
+       <Pole number="2">
+        <Real>-9512.742555</Real>
+        <Imaginary>11469.954778</Imaginary>
+       </Pole>
+       <Pole number="3">
+        <Real>-9512.742555</Real>
+        <Imaginary>-11469.954778</Imaginary>
+       </Pole>
+       <Pole number="4">
+        <Real>-454.525625</Real>
+        <Imaginary>0</Imaginary>
+       </Pole>
+       <Pole number="5">
+        <Real>-434.775479</Real>
+        <Imaginary>0</Imaginary>
+       </Pole>
+       <Pole number="6">
+        <Real>-90.184653</Real>
+        <Imaginary>-396.950704</Imaginary>
+       </Pole>
+       <Pole number="7">
+        <Real>-90.184653</Real>
+        <Imaginary>396.950704</Imaginary>
+       </Pole>
+       <Pole number="8">
+        <Real>-15.444069</Real>
+        <Imaginary>0</Imaginary>
+       </Pole>
+       <Pole number="9">
+        <Real>-.036783</Real>
+        <Imaginary>.037076</Imaginary>
+       </Pole>
+       <Pole number="10">
+        <Real>-.036783</Real>
+        <Imaginary>-.037076</Imaginary>
+       </Pole>
+      </PolesZeros>
+      <StageGain>
+       <Value>1509</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>V</Name>
+        <Description>Volts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>COUNTS</Name>
+        <Description>Digital Counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>40.0</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0.0</Delay>
+       <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1677721.6</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="3">
+      <FIR name="FIR_FLBELOW100_40">
+       <InputUnits>
+        <Name>COUNTS</Name>
+        <Description>Digital Counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>COUNTS</Name>
+        <Description>Digital Counts</Description>
+       </OutputUnits>
+       <Symmetry>NONE</Symmetry>
+       <NumeratorCoefficient i="0">.00000000000041895179</NumeratorCoefficient>
+       <NumeratorCoefficient i="1">.00033031761</NumeratorCoefficient>
+       <NumeratorCoefficient i="2">.0010292126</NumeratorCoefficient>
+       <NumeratorCoefficient i="3">-.003141228</NumeratorCoefficient>
+       <NumeratorCoefficient i="4">.00020570927</NumeratorCoefficient>
+       <NumeratorCoefficient i="5">.0015252131</NumeratorCoefficient>
+       <NumeratorCoefficient i="6">-.0062319267</NumeratorCoefficient>
+       <NumeratorCoefficient i="7">.010480133</NumeratorCoefficient>
+       <NumeratorCoefficient i="8">-.013120247</NumeratorCoefficient>
+       <NumeratorCoefficient i="9">.010782143</NumeratorCoefficient>
+       <NumeratorCoefficient i="10">-.00144455</NumeratorCoefficient>
+       <NumeratorCoefficient i="11">-.015872946</NumeratorCoefficient>
+       <NumeratorCoefficient i="12">.039507404</NumeratorCoefficient>
+       <NumeratorCoefficient i="13">-.06510363</NumeratorCoefficient>
+       <NumeratorCoefficient i="14">.085371559</NumeratorCoefficient>
+       <NumeratorCoefficient i="15">-.089191342</NumeratorCoefficient>
+       <NumeratorCoefficient i="16">.050061889</NumeratorCoefficient>
+       <NumeratorCoefficient i="17">.83723276</NumeratorCoefficient>
+       <NumeratorCoefficient i="18">.26672305</NumeratorCoefficient>
+       <NumeratorCoefficient i="19">-.16669311</NumeratorCoefficient>
+       <NumeratorCoefficient i="20">.095283986</NumeratorCoefficient>
+       <NumeratorCoefficient i="21">-.050921772</NumeratorCoefficient>
+       <NumeratorCoefficient i="22">.016145837</NumeratorCoefficient>
+       <NumeratorCoefficient i="23">.007063624</NumeratorCoefficient>
+       <NumeratorCoefficient i="24">-.018387713</NumeratorCoefficient>
+       <NumeratorCoefficient i="25">.01994141</NumeratorCoefficient>
+       <NumeratorCoefficient i="26">-.015489507</NumeratorCoefficient>
+       <NumeratorCoefficient i="27">.0085273541</NumeratorCoefficient>
+       <NumeratorCoefficient i="28">-.0025578868</NumeratorCoefficient>
+       <NumeratorCoefficient i="29">-.0018110264</NumeratorCoefficient>
+       <NumeratorCoefficient i="30">.0024264926</NumeratorCoefficient>
+       <NumeratorCoefficient i="31">-.0037576946</NumeratorCoefficient>
+       <NumeratorCoefficient i="32">.00046729273</NumeratorCoefficient>
+       <NumeratorCoefficient i="33">.00063307212</NumeratorCoefficient>
+       <NumeratorCoefficient i="34">-.0000015687414</NumeratorCoefficient>
+       <NumeratorCoefficient i="35">-.000012547978</NumeratorCoefficient>
+       <NumeratorCoefficient i="36">.00000032104054</NumeratorCoefficient>
+       <NumeratorCoefficient i="37">-.00000002633241</NumeratorCoefficient>
+       <NumeratorCoefficient i="38">-.000000050999748</NumeratorCoefficient>
+      </FIR>
+      <Decimation>
+       <InputSampleRate>40.0</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0.430462</Delay>
+       <Correction>0.430462</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel><Channel code="BHN" endDate="2014-02-18T23:09:00" locationCode="00" startDate="2012-08-28T20:00:00">
+    <Latitude>37.49936</Latitude>
+    <Longitude>-122.42431</Longitude>
+    <Elevation>209.1</Elevation>
+    <Depth>0.0</Depth>
+    <Azimuth>270.0</Azimuth>
+    <Dip>0.0</Dip>
+    <Type>CONTINUOUS</Type>
+    <Type>GEOPHYSICAL</Type>
+    <SampleRate>40.0</SampleRate>
+    <ClockDrift>0.002</ClockDrift>
+    <CalibrationUnits>
+     <Name>A</Name>
+     <Description>Amperes</Description>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Streckeisen STS-2 VBB Tri-Axial Seismometer</Description>
+    </Sensor>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>2.53352738816E9</Value>
+      <Frequency>1.0</Frequency>
+      <InputUnits>
+       <Name>M/S</Name>
+       <Description>Velocity in Meters Per Second</Description>
+      </InputUnits>
+      <OutputUnits>
+       <Name>COUNTS</Name>
+       <Description>Digital Counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <PolesZeros>
+       <InputUnits>
+        <Name>M/S</Name>
+        <Description>Velocity in Meters Per Second</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>V</Name>
+        <Description>Volts</Description>
+       </OutputUnits>
+       <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+       <NormalizationFactor>10110639936503700000</NormalizationFactor>
+       <NormalizationFrequency>1</NormalizationFrequency>
+       <Zero number="0">
+        <Real>-461.81412</Real>
+        <Imaginary>429.078725</Imaginary>
+       </Zero>
+       <Zero number="1">
+        <Real>-461.81412</Real>
+        <Imaginary>-429.078725</Imaginary>
+       </Zero>
+       <Zero number="2">
+        <Real>-206.276974</Real>
+        <Imaginary>0</Imaginary>
+       </Zero>
+       <Zero number="3">
+        <Real>-15.14876</Real>
+        <Imaginary>0</Imaginary>
+       </Zero>
+       <Zero number="4">
+        <Real>0</Real>
+        <Imaginary>0</Imaginary>
+       </Zero>
+       <Zero number="5">
+        <Real>0</Real>
+        <Imaginary>0</Imaginary>
+       </Zero>
+       <Pole number="0">
+        <Real>-10239.707095</Real>
+        <Imaginary>2725.017468</Imaginary>
+       </Pole>
+       <Pole number="1">
+        <Real>-10239.707095</Real>
+        <Imaginary>-2725.017468</Imaginary>
+       </Pole>
+       <Pole number="2">
+        <Real>-9512.742555</Real>
+        <Imaginary>11469.954778</Imaginary>
+       </Pole>
+       <Pole number="3">
+        <Real>-9512.742555</Real>
+        <Imaginary>-11469.954778</Imaginary>
+       </Pole>
+       <Pole number="4">
+        <Real>-454.525625</Real>
+        <Imaginary>0</Imaginary>
+       </Pole>
+       <Pole number="5">
+        <Real>-434.419432</Real>
+        <Imaginary>0</Imaginary>
+       </Pole>
+       <Pole number="6">
+        <Real>-89.472559</Real>
+        <Imaginary>-397.222975</Imaginary>
+       </Pole>
+       <Pole number="7">
+        <Real>-89.472559</Real>
+        <Imaginary>397.222975</Imaginary>
+       </Pole>
+       <Pole number="8">
+        <Real>-15.431503</Real>
+        <Imaginary>0</Imaginary>
+       </Pole>
+       <Pole number="9">
+        <Real>-.036788</Real>
+        <Imaginary>.037029</Imaginary>
+       </Pole>
+       <Pole number="10">
+        <Real>-.036788</Real>
+        <Imaginary>-.037029</Imaginary>
+       </Pole>
+      </PolesZeros>
+      <StageGain>
+       <Value>1510.1</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>V</Name>
+        <Description>Volts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>COUNTS</Name>
+        <Description>Digital Counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>40.0</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0.0</Delay>
+       <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1677721.6</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="3">
+      <FIR name="FIR_FLBELOW100_40">
+       <InputUnits>
+        <Name>COUNTS</Name>
+        <Description>Digital Counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>COUNTS</Name>
+        <Description>Digital Counts</Description>
+       </OutputUnits>
+       <Symmetry>NONE</Symmetry>
+       <NumeratorCoefficient i="0">.00000000000041895179</NumeratorCoefficient>
+       <NumeratorCoefficient i="1">.00033031761</NumeratorCoefficient>
+       <NumeratorCoefficient i="2">.0010292126</NumeratorCoefficient>
+       <NumeratorCoefficient i="3">-.003141228</NumeratorCoefficient>
+       <NumeratorCoefficient i="4">.00020570927</NumeratorCoefficient>
+       <NumeratorCoefficient i="5">.0015252131</NumeratorCoefficient>
+       <NumeratorCoefficient i="6">-.0062319267</NumeratorCoefficient>
+       <NumeratorCoefficient i="7">.010480133</NumeratorCoefficient>
+       <NumeratorCoefficient i="8">-.013120247</NumeratorCoefficient>
+       <NumeratorCoefficient i="9">.010782143</NumeratorCoefficient>
+       <NumeratorCoefficient i="10">-.00144455</NumeratorCoefficient>
+       <NumeratorCoefficient i="11">-.015872946</NumeratorCoefficient>
+       <NumeratorCoefficient i="12">.039507404</NumeratorCoefficient>
+       <NumeratorCoefficient i="13">-.06510363</NumeratorCoefficient>
+       <NumeratorCoefficient i="14">.085371559</NumeratorCoefficient>
+       <NumeratorCoefficient i="15">-.089191342</NumeratorCoefficient>
+       <NumeratorCoefficient i="16">.050061889</NumeratorCoefficient>
+       <NumeratorCoefficient i="17">.83723276</NumeratorCoefficient>
+       <NumeratorCoefficient i="18">.26672305</NumeratorCoefficient>
+       <NumeratorCoefficient i="19">-.16669311</NumeratorCoefficient>
+       <NumeratorCoefficient i="20">.095283986</NumeratorCoefficient>
+       <NumeratorCoefficient i="21">-.050921772</NumeratorCoefficient>
+       <NumeratorCoefficient i="22">.016145837</NumeratorCoefficient>
+       <NumeratorCoefficient i="23">.007063624</NumeratorCoefficient>
+       <NumeratorCoefficient i="24">-.018387713</NumeratorCoefficient>
+       <NumeratorCoefficient i="25">.01994141</NumeratorCoefficient>
+       <NumeratorCoefficient i="26">-.015489507</NumeratorCoefficient>
+       <NumeratorCoefficient i="27">.0085273541</NumeratorCoefficient>
+       <NumeratorCoefficient i="28">-.0025578868</NumeratorCoefficient>
+       <NumeratorCoefficient i="29">-.0018110264</NumeratorCoefficient>
+       <NumeratorCoefficient i="30">.0024264926</NumeratorCoefficient>
+       <NumeratorCoefficient i="31">-.0037576946</NumeratorCoefficient>
+       <NumeratorCoefficient i="32">.00046729273</NumeratorCoefficient>
+       <NumeratorCoefficient i="33">.00063307212</NumeratorCoefficient>
+       <NumeratorCoefficient i="34">-.0000015687414</NumeratorCoefficient>
+       <NumeratorCoefficient i="35">-.000012547978</NumeratorCoefficient>
+       <NumeratorCoefficient i="36">.00000032104054</NumeratorCoefficient>
+       <NumeratorCoefficient i="37">-.00000002633241</NumeratorCoefficient>
+       <NumeratorCoefficient i="38">-.000000050999748</NumeratorCoefficient>
+      </FIR>
+      <Decimation>
+       <InputSampleRate>40.0</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0.430462</Delay>
+       <Correction>0.430462</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel><Channel code="BHZ" endDate="2014-02-18T23:09:00" locationCode="00" startDate="2012-08-28T20:00:00">
+    <Latitude>37.49936</Latitude>
+    <Longitude>-122.42431</Longitude>
+    <Elevation>209.1</Elevation>
+    <Depth>0.0</Depth>
+    <Azimuth>0.0</Azimuth>
+    <Dip>-90.0</Dip>
+    <Type>CONTINUOUS</Type>
+    <Type>GEOPHYSICAL</Type>
+    <SampleRate>40.0</SampleRate>
+    <ClockDrift>0.002</ClockDrift>
+    <CalibrationUnits>
+     <Name>A</Name>
+     <Description>Amperes</Description>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Streckeisen STS-2 VBB Tri-Axial Seismometer</Description>
+    </Sensor>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>2.52966862848E9</Value>
+      <Frequency>1.0</Frequency>
+      <InputUnits>
+       <Name>M/S</Name>
+       <Description>Velocity in Meters Per Second</Description>
+      </InputUnits>
+      <OutputUnits>
+       <Name>COUNTS</Name>
+       <Description>Digital Counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <PolesZeros>
+       <InputUnits>
+        <Name>M/S</Name>
+        <Description>Velocity in Meters Per Second</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>V</Name>
+        <Description>Volts</Description>
+       </OutputUnits>
+       <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+       <NormalizationFactor>10126523162144200000</NormalizationFactor>
+       <NormalizationFrequency>1</NormalizationFrequency>
+       <Zero number="0">
+        <Real>-461.81412</Real>
+        <Imaginary>429.078725</Imaginary>
+       </Zero>
+       <Zero number="1">
+        <Real>-461.81412</Real>
+        <Imaginary>-429.078725</Imaginary>
+       </Zero>
+       <Zero number="2">
+        <Real>-206.360749</Real>
+        <Imaginary>0</Imaginary>
+       </Zero>
+       <Zero number="3">
+        <Real>-15.14876</Real>
+        <Imaginary>0</Imaginary>
+       </Zero>
+       <Zero number="4">
+        <Real>0</Real>
+        <Imaginary>0</Imaginary>
+       </Zero>
+       <Zero number="5">
+        <Real>0</Real>
+        <Imaginary>0</Imaginary>
+       </Zero>
+       <Pole number="0">
+        <Real>-10239.707095</Real>
+        <Imaginary>2725.017468</Imaginary>
+       </Pole>
+       <Pole number="1">
+        <Real>-10239.707095</Real>
+        <Imaginary>-2725.017468</Imaginary>
+       </Pole>
+       <Pole number="2">
+        <Real>-9512.742555</Real>
+        <Imaginary>11469.954778</Imaginary>
+       </Pole>
+       <Pole number="3">
+        <Real>-9512.742555</Real>
+        <Imaginary>-11469.954778</Imaginary>
+       </Pole>
+       <Pole number="4">
+        <Real>-454.525625</Real>
+        <Imaginary>0</Imaginary>
+       </Pole>
+       <Pole number="5">
+        <Real>-435.131526</Real>
+        <Imaginary>0</Imaginary>
+       </Pole>
+       <Pole number="6">
+        <Real>-90.896747</Real>
+        <Imaginary>-396.678432</Imaginary>
+       </Pole>
+       <Pole number="7">
+        <Real>-90.896747</Real>
+        <Imaginary>396.678432</Imaginary>
+       </Pole>
+       <Pole number="8">
+        <Real>-15.456636</Real>
+        <Imaginary>0</Imaginary>
+       </Pole>
+       <Pole number="9">
+        <Real>-.036778</Real>
+        <Imaginary>.037123</Imaginary>
+       </Pole>
+       <Pole number="10">
+        <Real>-.036778</Real>
+        <Imaginary>-.037123</Imaginary>
+       </Pole>
+      </PolesZeros>
+      <StageGain>
+       <Value>1507.8</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>V</Name>
+        <Description>Volts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>COUNTS</Name>
+        <Description>Digital Counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>40.0</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0.0</Delay>
+       <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1677721.6</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="3">
+      <FIR name="FIR_FLBELOW100_40">
+       <InputUnits>
+        <Name>COUNTS</Name>
+        <Description>Digital Counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>COUNTS</Name>
+        <Description>Digital Counts</Description>
+       </OutputUnits>
+       <Symmetry>NONE</Symmetry>
+       <NumeratorCoefficient i="0">.00000000000041895179</NumeratorCoefficient>
+       <NumeratorCoefficient i="1">.00033031761</NumeratorCoefficient>
+       <NumeratorCoefficient i="2">.0010292126</NumeratorCoefficient>
+       <NumeratorCoefficient i="3">-.003141228</NumeratorCoefficient>
+       <NumeratorCoefficient i="4">.00020570927</NumeratorCoefficient>
+       <NumeratorCoefficient i="5">.0015252131</NumeratorCoefficient>
+       <NumeratorCoefficient i="6">-.0062319267</NumeratorCoefficient>
+       <NumeratorCoefficient i="7">.010480133</NumeratorCoefficient>
+       <NumeratorCoefficient i="8">-.013120247</NumeratorCoefficient>
+       <NumeratorCoefficient i="9">.010782143</NumeratorCoefficient>
+       <NumeratorCoefficient i="10">-.00144455</NumeratorCoefficient>
+       <NumeratorCoefficient i="11">-.015872946</NumeratorCoefficient>
+       <NumeratorCoefficient i="12">.039507404</NumeratorCoefficient>
+       <NumeratorCoefficient i="13">-.06510363</NumeratorCoefficient>
+       <NumeratorCoefficient i="14">.085371559</NumeratorCoefficient>
+       <NumeratorCoefficient i="15">-.089191342</NumeratorCoefficient>
+       <NumeratorCoefficient i="16">.050061889</NumeratorCoefficient>
+       <NumeratorCoefficient i="17">.83723276</NumeratorCoefficient>
+       <NumeratorCoefficient i="18">.26672305</NumeratorCoefficient>
+       <NumeratorCoefficient i="19">-.16669311</NumeratorCoefficient>
+       <NumeratorCoefficient i="20">.095283986</NumeratorCoefficient>
+       <NumeratorCoefficient i="21">-.050921772</NumeratorCoefficient>
+       <NumeratorCoefficient i="22">.016145837</NumeratorCoefficient>
+       <NumeratorCoefficient i="23">.007063624</NumeratorCoefficient>
+       <NumeratorCoefficient i="24">-.018387713</NumeratorCoefficient>
+       <NumeratorCoefficient i="25">.01994141</NumeratorCoefficient>
+       <NumeratorCoefficient i="26">-.015489507</NumeratorCoefficient>
+       <NumeratorCoefficient i="27">.0085273541</NumeratorCoefficient>
+       <NumeratorCoefficient i="28">-.0025578868</NumeratorCoefficient>
+       <NumeratorCoefficient i="29">-.0018110264</NumeratorCoefficient>
+       <NumeratorCoefficient i="30">.0024264926</NumeratorCoefficient>
+       <NumeratorCoefficient i="31">-.0037576946</NumeratorCoefficient>
+       <NumeratorCoefficient i="32">.00046729273</NumeratorCoefficient>
+       <NumeratorCoefficient i="33">.00063307212</NumeratorCoefficient>
+       <NumeratorCoefficient i="34">-.0000015687414</NumeratorCoefficient>
+       <NumeratorCoefficient i="35">-.000012547978</NumeratorCoefficient>
+       <NumeratorCoefficient i="36">.00000032104054</NumeratorCoefficient>
+       <NumeratorCoefficient i="37">-.00000002633241</NumeratorCoefficient>
+       <NumeratorCoefficient i="38">-.000000050999748</NumeratorCoefficient>
+      </FIR>
+      <Decimation>
+       <InputSampleRate>40.0</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0.430462</Delay>
+       <Correction>0.430462</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+  </Station>
+ </Network>
+</FDSNStationXML>

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+ <FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:iris="http://www.fdsn.org/xml/station/1/iris" xsi:schemaLocation="http://www.fdsn.org/xml/station/1 http://www.fdsn.org/xml/station/fdsn-station-1.1.xsd" schemaVersion="1.1">
+  <Source>IRIS-DMC</Source>
+  <Sender>IRIS-DMC</Sender>
+  <Module>IRIS WEB SERVICE: fdsnws-station | version: 1.1.46</Module>
+  <ModuleURI></ModuleURI>
+  <Created>2020-10-16T21:18:59</Created>
+  <Network code="UW" startDate="1963-01-01T00:00:00" restrictedStatus="open">
+   <Description>Pacific Northwest Seismic Network (PNSN)</Description>
+   <Identifier type="DOI">10.7914/SN/UW
+   </Identifier>
+   <TotalNumberStations>722</TotalNumberStations>
+   <SelectedNumberStations>1</SelectedNumberStations>
+   <Station code="DAVN" startDate="2006-09-23T00:00:00" restrictedStatus="open" iris:alternateNetworkCodes="_CASCADIA,.GREG,_PACNW,_REALTIME,.UNRESTRICTED,_US-REGIONAL,_US-TA-ADOPTED">
+    <Latitude>47.8006</Latitude>
+    <Longitude>-118.2741</Longitude>
+    <Elevation>482.6</Elevation>
+    <Site>
+     <Name>Davenport, WA, USA</Name>
+    </Site>
+    <CreationDate>2006-09-23T00:00:00</CreationDate>
+    <TotalNumberChannels>49</TotalNumberChannels>
+    <SelectedNumberChannels>3</SelectedNumberChannels>
+    <Channel code="BHE" locationCode="" startDate="2007-07-25T00:00:00" restrictedStatus="open">
+     <Latitude>47.8006</Latitude>
+     <Longitude>-118.2741</Longitude>
+     <Elevation>482.6</Elevation>
+     <Depth>0</Depth>
+     <Azimuth>90</Azimuth>
+     <Dip>0</Dip>
+     <Type>GEOPHYSICAL</Type>
+     <SampleRate>4E01</SampleRate>
+     <Sensor>
+      <Type>STRECKEISEN</Type>
+      <Description>VELOCITY-TRANSDUCER</Description>
+      <Manufacturer>STRECKEISEN</Manufacturer>
+      <Vendor>Streckeisen</Vendor>
+      <Model>STS-2</Model>
+      <SerialNumber>110429</SerialNumber>
+     </Sensor>
+     <Equipment>
+      <Type>QUANTERRA</Type>
+      <Manufacturer>QUANTERRA</Manufacturer>
+      <Vendor>Quanterra</Vendor>
+      <Model>Q330</Model>
+      <SerialNumber>0100000B697B378A</SerialNumber>
+     </Equipment>
+     <Response>
+     <InstrumentSensitivity>
+       <Value>6.29145E8</Value>
+       <Frequency>1.0</Frequency>
+       <InputUnits>
+         <Name>m/s</Name>
+         <Description>Velocity in meters per second</Description>
+       </InputUnits>
+       <OutputUnits>
+         <Name>counts</Name>
+         <Description>Digital Count in Digital counts</Description>
+       </OutputUnits>
+     </InstrumentSensitivity>
+      <Stage number="1">
+      <PolesZeros name="STS-2_COMPONENT_3_DEFAULT_DERIVED">
+        <Description>CISN</Description>
+        <InputUnits>
+          <Name>m/s</Name>
+          <Description>Velocity in meters per second</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>V</Name>
+          <Description>Voltage in Volts</Description>
+        </OutputUnits>
+        <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+        <NormalizationFactor>4.862455445809E7</NormalizationFactor>
+        <NormalizationFrequency>1.0</NormalizationFrequency>
+        <Zero number="0">
+          <Real>0.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="1">
+          <Real>0.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Pole number="2">
+          <Real>-0.03702367</Real>
+          <Imaginary>0.03702438</Imaginary>
+        </Pole>
+        <Pole number="3">
+          <Real>-0.03702367</Real>
+          <Imaginary>-0.03702438</Imaginary>
+        </Pole>
+        <Pole number="4">
+          <Real>-118.7522</Real>
+          <Imaginary>423.488088</Imaginary>
+        </Pole>
+        <Pole number="5">
+          <Real>-118.7522</Real>
+          <Imaginary>-423.48809</Imaginary>
+        </Pole>
+        <Pole number="6">
+          <Real>-251.32741</Real>
+          <Imaginary>0.0</Imaginary>
+        </Pole>
+      </PolesZeros>
+      <StageGain>
+        <Value>1500.0</Value>
+        <Frequency>1.0</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="2">
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>1.0</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="3">
+      <Coefficients>
+        <InputUnits>
+          <Name>V</Name>
+          <Description>Voltage in Volts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Count in Digital counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>40.0</InputSampleRate>
+        <Factor>1</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0</Delay>
+        <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>419430.0</Value>
+        <Frequency>1.0</Frequency>
+      </StageGain>
+
+      </Stage>
+     </Response>
+    </Channel>
+    <Channel code="BHN" locationCode="" startDate="2007-07-25T00:00:00" restrictedStatus="open">
+     <Latitude>47.8006</Latitude>
+     <Longitude>-118.2741</Longitude>
+     <Elevation>482.6</Elevation>
+     <Depth>0</Depth>
+     <Azimuth>0</Azimuth>
+     <Dip>0</Dip>
+     <Type>GEOPHYSICAL</Type>
+     <SampleRate>4E01</SampleRate>
+     <Sensor>
+      <Type>STRECKEISEN</Type>
+      <Description>VELOCITY-TRANSDUCER</Description>
+      <Manufacturer>STRECKEISEN</Manufacturer>
+      <Vendor>Streckeisen</Vendor>
+      <Model>STS-2</Model>
+      <SerialNumber>110429</SerialNumber>
+     </Sensor>
+     <Equipment>
+      <Type>QUANTERRA</Type>
+      <Manufacturer>QUANTERRA</Manufacturer>
+      <Vendor>Quanterra</Vendor>
+      <Model>Q330</Model>
+      <SerialNumber>0100000B697B378A</SerialNumber>
+     </Equipment>
+     <Response>
+     <InstrumentSensitivity>
+       <Value>6.29145E8</Value>
+       <Frequency>1.0</Frequency>
+       <InputUnits>
+         <Name>m/s</Name>
+         <Description>Velocity in meters per second</Description>
+       </InputUnits>
+       <OutputUnits>
+         <Name>counts</Name>
+         <Description>Digital Count in Digital counts</Description>
+       </OutputUnits>
+     </InstrumentSensitivity>
+      <Stage number="1">
+      <PolesZeros name="STS-2_COMPONENT_2_DEFAULT_DERIVED">
+        <Description>CISN</Description>
+        <InputUnits>
+          <Name>m/s</Name>
+          <Description>Velocity in meters per second</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>V</Name>
+          <Description>Voltage in Volts</Description>
+        </OutputUnits>
+        <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+        <NormalizationFactor>4.862455445809E7</NormalizationFactor>
+        <NormalizationFrequency>1.0</NormalizationFrequency>
+        <Zero number="0">
+          <Real>0.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="1">
+          <Real>0.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Pole number="2">
+          <Real>-0.03702367</Real>
+          <Imaginary>0.03702438</Imaginary>
+        </Pole>
+        <Pole number="3">
+          <Real>-0.03702367</Real>
+          <Imaginary>-0.03702438</Imaginary>
+        </Pole>
+        <Pole number="4">
+          <Real>-118.7522</Real>
+          <Imaginary>423.488088</Imaginary>
+        </Pole>
+        <Pole number="5">
+          <Real>-118.7522</Real>
+          <Imaginary>-423.48809</Imaginary>
+        </Pole>
+        <Pole number="6">
+          <Real>-251.32741</Real>
+          <Imaginary>0.0</Imaginary>
+        </Pole>
+      </PolesZeros>
+      <StageGain>
+        <Value>1500.0</Value>
+        <Frequency>1.0</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="2">
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>1.0</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="3">
+      <Coefficients>
+        <InputUnits>
+          <Name>V</Name>
+          <Description>Voltage in Volts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Count in Digital counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>40.0</InputSampleRate>
+        <Factor>1</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0</Delay>
+        <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>419430.0</Value>
+        <Frequency>1.0</Frequency>
+      </StageGain>
+
+      </Stage>
+     </Response>
+    </Channel>
+    <Channel code="BHZ" locationCode="" startDate="2007-07-25T00:00:00" restrictedStatus="open">
+     <Latitude>47.8006</Latitude>
+     <Longitude>-118.2741</Longitude>
+     <Elevation>482.6</Elevation>
+     <Depth>0</Depth>
+     <Azimuth>0</Azimuth>
+     <Dip>-90</Dip>
+     <Type>GEOPHYSICAL</Type>
+     <SampleRate>4E01</SampleRate>
+     <Sensor>
+      <Type>STRECKEISEN</Type>
+      <Description>VELOCITY-TRANSDUCER</Description>
+      <Manufacturer>STRECKEISEN</Manufacturer>
+      <Vendor>Streckeisen</Vendor>
+      <Model>STS-2</Model>
+      <SerialNumber>110429</SerialNumber>
+     </Sensor>
+     <Equipment>
+      <Type>QUANTERRA</Type>
+      <Manufacturer>QUANTERRA</Manufacturer>
+      <Vendor>Quanterra</Vendor>
+      <Model>Q330</Model>
+      <SerialNumber>0100000B697B378A</SerialNumber>
+     </Equipment>
+     <Response>
+     <InstrumentSensitivity>
+       <Value>6.29145E8</Value>
+       <Frequency>1.0</Frequency>
+       <InputUnits>
+         <Name>m/s</Name>
+         <Description>Velocity in meters per second</Description>
+       </InputUnits>
+       <OutputUnits>
+         <Name>counts</Name>
+         <Description>Digital Count in Digital counts</Description>
+       </OutputUnits>
+     </InstrumentSensitivity>
+      <Stage number="1">
+      <PolesZeros name="STS-2_COMPONENT_1_DEFAULT_DERIVED">
+        <Description>CISN</Description>
+        <InputUnits>
+          <Name>m/s</Name>
+          <Description>Velocity in meters per second</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>V</Name>
+          <Description>Voltage in Volts</Description>
+        </OutputUnits>
+        <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+        <NormalizationFactor>4.862455445809E7</NormalizationFactor>
+        <NormalizationFrequency>1.0</NormalizationFrequency>
+        <Zero number="0">
+          <Real>0.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Zero number="1">
+          <Real>0.0</Real>
+          <Imaginary>0.0</Imaginary>
+        </Zero>
+        <Pole number="2">
+          <Real>-0.03702367</Real>
+          <Imaginary>0.03702438</Imaginary>
+        </Pole>
+        <Pole number="3">
+          <Real>-0.03702367</Real>
+          <Imaginary>-0.03702438</Imaginary>
+        </Pole>
+        <Pole number="4">
+          <Real>-118.7522</Real>
+          <Imaginary>423.488088</Imaginary>
+        </Pole>
+        <Pole number="5">
+          <Real>-118.7522</Real>
+          <Imaginary>-423.48809</Imaginary>
+        </Pole>
+        <Pole number="6">
+          <Real>-251.32741</Real>
+          <Imaginary>0.0</Imaginary>
+        </Pole>
+      </PolesZeros>
+      <StageGain>
+        <Value>1500.0</Value>
+        <Frequency>1.0</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="2">
+      <StageGain>
+        <Value>1.0</Value>
+        <Frequency>1.0</Frequency>
+      </StageGain>
+
+      </Stage>
+      <Stage number="3">
+      <Coefficients>
+        <InputUnits>
+          <Name>V</Name>
+          <Description>Voltage in Volts</Description>
+        </InputUnits>
+        <OutputUnits>
+          <Name>counts</Name>
+          <Description>Digital Count in Digital counts</Description>
+        </OutputUnits>
+        <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+        <InputSampleRate>40.0</InputSampleRate>
+        <Factor>1</Factor>
+        <Offset>0</Offset>
+        <Delay>0.0</Delay>
+        <Correction>0.0</Correction>
+      </Decimation>
+      <StageGain>
+        <Value>419430.0</Value>
+        <Frequency>1.0</Frequency>
+      </StageGain>
+
+      </Stage>
+     </Response>
+    </Channel>
+   </Station>
+  </Network>
+ </FDSNStationXML>
