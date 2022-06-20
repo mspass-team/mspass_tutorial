@@ -1,0 +1,7 @@
+data_taper_length 10.0
+filter_high_corner 2.0
+filter_low_corner 0.02
+analysis_window_starttime -200.0
+analysis_window_endtime 200.0
+vp0 6.0
+vs0 3.5
