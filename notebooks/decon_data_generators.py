@@ -21,8 +21,8 @@ from numpy.random import randn
 from mspasspy.ccore.seismic import (Seismogram,
                                     TimeSeries,
                                     TimeSeriesEnsemble,
-                                    TimeWindow,
                                     TimeReferenceType)
+from mspasspy.ccore.algorithms.basic import TimeWindow
 
 def make_impulse_vector(lag,imp,n=500):
     """

@@ -35,6 +35,7 @@ npoles_hi 2
 # end butterworth only parameters
 noise_window_start -45.0
 noise_window_end -5.0
+high_frequency_search_start 9.0
 
 taper_type cosine
 CosineTaper &Arr{

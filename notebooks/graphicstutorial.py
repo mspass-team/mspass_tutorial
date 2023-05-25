@@ -110,6 +110,7 @@ def maketsens(d,n=20,moveout=True,moveout_dt=0.05):
         if(moveout):
             y.t0+=float(i)*moveout_dt
         result.member.append(y)
+    result.set_live()
     return result
 def makeseisens(d,n=20,moveout=True,moveout_dt=0.05):
     """
@@ -123,4 +124,5 @@ def makeseisens(d,n=20,moveout=True,moveout_dt=0.05):
         if(moveout):
             y.t0+=float(i)*moveout_dt
         result.member.append(y)
+    result.set_live()
     return result
