@@ -1,0 +1,68 @@
+snr_for_bandwidth_estimator 2.0
+decon_bandwidth_cutoff 10.0
+operator_nfft 2048
+algorithm generalized_water_level
+#algorithm colored_noise_damping
+#damping_factor 0.01
+damping_factor 0.1
+#damping_factor 100.0
+snr_regularization_floor 1.5
+#snr_regularization_floor 0.001
+# This is used by both generalized water level and colored noise damping
+# it is essentially dynamic range of noise expressed as ratio max/floor
+#noise_floor 0.5
+noise_floor 0.1
+# use this to reduce to damped least squares for test data
+#noise_floor 1.0
+target_sample_interval 0.05
+deconvolution_data_window_start -5.0
+deconvolution_data_window_end 30.0
+time_bandwidth_product 6.0
+number_tapers 12
+shaping_wavelet_dt 0.05
+#shaping_wavelet_type gaussian
+#shaping_wavelet_frequency 0.05
+#shaping_wavelet_type ricker
+shaping_wavelet_frequency 3.0
+# These are used only for zero phase butterworth shaping filter option
+# butterworth is the only accepted key for enabling that option 
+# i.e no mixed case
+shaping_wavelet_type butterworth
+f3db_lo 0.25
+f3db_hi 1.5
+npoles_lo 2
+npoles_hi 2
+# end butterworth only parameters
+noise_window_start -45.0
+noise_window_end -5.0
+high_frequency_search_start 9.0
+
+taper_type cosine
+CosineTaper &Arr{
+  data_taper &Arr{
+    front0 -2.0
+    front1 -1.0
+    tail1 27.0
+    tail0 29.5
+  }
+  wavelet_taper &Arr{
+   front0 -0.75
+   front1 -0.25
+   tail1 2.5
+   tail0 3.0
+  }
+}
+LinearTaper &Arr{
+  data_taper &Arr{
+    front0 -2.0
+    front1 -1.0
+    tail1 27.0
+    tail0 29.5
+  }
+  wavelet_taper &Arr{
+   front0 -0.75
+   front1 -0.25
+   tail1 2.5
+   tail0 3.0
+  }
+}
