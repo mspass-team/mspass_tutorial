@@ -1,0 +1,11 @@
+The notebooks in this directory were used for the SCOPED workshop held 
+May 20-24 in Seattle, Washington.   For simplcitity students in the workshop 
+should clone this repository and run the tutorials from this working directory.  
+
+The notebook called "data_retrieval_mspass2024course.ipynb" can be used 
+if you want to run this tutorial outside the workshop.   It retrieves and saves
+the waveform data used in the workshop.   The data set is too large for github 
+and is best handled by regeneration.   Be warned that at the time of this workshop
+that process is pretty slow and takes of the order of 2 hours.   That notebook 
+is expected to actually be archaic soon as Earthscope moves their data to 
+a cloud service provider.  
