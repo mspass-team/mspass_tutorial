@@ -1,0 +1,5 @@
+#
+schema css3.0
+dblocks nfs
+dbidserver anfops.ucsd.edu:2495
+dbpath 
