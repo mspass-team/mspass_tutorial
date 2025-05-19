@@ -1,0 +1,9 @@
+notebooks/USArrayProcessExample/wf
+notebooks/USArrayProcessExample/logs/
+notebooks/USArrayProcessExample/mongodb/
+notebooks/USArrayProcessExample/work/
+notebooks/USArrayProcessExample/json/
+notebooks/USArrayProcessExample/output
+notebooks/USArrayProcessExample/wf_TimeSeries
+notebooks/USArrayProcessExample/wf_Seismogram
+notebooks/USArrayProcessExample/wf_RF

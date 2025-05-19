@@ -23,7 +23,7 @@ import time
 
 
 # change for different calendar year
-year = 2014
+year = 2012
 dbname = "usarray{}".format(year)
 tsdir="./wf_TimeSeries/{}".format(year)
 dbmaster="usarray48"
