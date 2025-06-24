@@ -161,7 +161,7 @@ def s3_mseed_reader(doc,s3client=None,bucket="scedc-pds")->TimeSeriesEnsemble:
         st = obspy.read(io.BytesIO(mseed_content),format="mseed")
         ens = Stream2TimeSeriesEnsemble(st)
         if len(ens.member)>1:
-            print("Warning - file was segmented")
+            print("Warning - object content was a data gap and was segmented")
             print("Number of segments=",len(ens.member))
         return ens
     except ClientError as e:
