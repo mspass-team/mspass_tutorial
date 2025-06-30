@@ -1,0 +1,49 @@
+# This needs to point to the mspass apptainer file
+container: /home1/00692/train00/ec25/mspass_v2.1.0.sif
+# As the name implies this is the top level run directory for this project
+working_directory:  /scratch1/04465/pavlis/ES2025
+# logs from mongodb and dask will be written in this directory
+log_directory:  /scratch1/04465/pavlis/ES2025/logs
+# this should point to a unique directory to contain the files
+# used by the database server
+database_directory:  /scratch1/04465/pavlis/ES2025/db
+# dask workers need a scratch directory. This should be a unique directory 
+# to avoid confusion.   It is a scratch directory an can be cleared after 
+# each run if necessary
+worker_directory:  /scratch1/04465/pavlis/ES2025/work
+# normal use should set these to number of cores on each node
+# Can be reduced if node sharing is enabled to the number of cpus requested
+# in slurm.  Also may need to be reduced if you experience memory problems
+# handling large ensembles
+workers_per_node: 50
+# one can choose to launch workes on the master node by setting this 
+# value to a positive number.   Dependent upon many factors but usually 
+# should be less no more than the number of cores - 2
+primary_node_workers: 40
+cluster_subnet_name:  frontera.tacc.utexas.edu
+db_startup_delay:  10   # number of seconds to pause after launching MongoDB
+HPC_cluster: 
+    # This defines the host where python/jupyter and the scheduler will run
+    # In this implementation that is frozen
+    primary_host:  auto
+    # auto will run database on primary_host.  
+    database_host:  auto
+    scheduler_host:  auto
+    worker_hosts:  auto
+    job_scheduler:  slurm
+    task_scheduler:  dask
+    container_run_command:  apptainer run
+    # Change this to bind your working directory to the container
+    # Setting --home to the run directory is necessary for these python scripts
+    container_run_args:  -B /scratch1/04465/pavlis/ES2025 --home /scratch1/04465/pavlis/ES2025
+    # flag to set environment variables - likely not to change but this is
+    # what apptainer uses
+    container_env_flag:  --env
+    # local version of mpiexec.  TACC has a nonstandard version
+    # currently there are not common args and teh launcher has to 
+    # append a number of things
+    worker_run_command:  mpiexec 
+    setup_tunnel: false
+    # this needs to be a shell script on current path.  
+    # executed only if setup_tunnel is set True
+    tunnel_setup_command:  tacc_mspass_com_setup.sh

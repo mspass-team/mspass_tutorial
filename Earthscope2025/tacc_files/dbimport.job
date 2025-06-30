@@ -1,0 +1,21 @@
+#!/bin/bash
+# If your cluster uses slurm top needs to be some variant of this
+# Check documentation for additional arguments that may be required or desirable
+#SBATCH -J mspass           # Job name
+#SBATCH -o mspass.o%j       # Name of stdout output file
+#SBATCH -e mspass.e%j
+#SBATCH -p normal           # Queue (partition) name
+#SBATCH -N 1                # Total # of nodes - 1 for MsPASS short course students
+#SBATCH -n 1                # Total # of mpi tasks (normally the same as -N)
+#SBATCH -A EAR23006
+#SBATCH -t 00:05:00         # Run time (hh:mm:ss)
+module load tacc-apptainer
+module load python3/3.9.2
+# Students will need to change this to their working directory 
+# for their training account
+cd $SCRATCH/ES2025
+python3 << EOI
+from mspass_launcher.hpc import HPCClusterLauncher
+launcher = HPCClusterLauncher(verbose=True)
+launcher.run("run_mongoimport.py")
+EOI
