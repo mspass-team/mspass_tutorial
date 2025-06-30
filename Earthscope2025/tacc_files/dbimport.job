@@ -11,9 +11,9 @@
 #SBATCH -t 00:05:00         # Run time (hh:mm:ss)
 module load tacc-apptainer
 module load python3/3.9.2
-# Students will need to change this to their working directory 
-# for their training account
-cd $SCRATCH/ES2025
+# Students will all be instructed to use there version of this directory
+# The yaml file defines all items that have to be customized 
+cd $SCRATCH
 python3 << EOI
 from mspass_launcher.hpc import HPCClusterLauncher
 launcher = HPCClusterLauncher(verbose=True)
