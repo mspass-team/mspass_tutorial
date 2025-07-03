@@ -3,8 +3,7 @@
 # Check documentation for additional arguments that may be required or desirable
 #SBATCH -J mspass           # Job name
 #SBATCH -o mspass.o%j       # Name of stdout output file
-#SBATCH -e mspass.e%j
-#SBATCH -p normal           # Queue (partition) name
+#SBATCH -p small            # Queue (partition) name
 #SBATCH -N 1                # Total # of nodes - 1 for MsPASS short course students
 #SBATCH -n 1                # Total # of mpi tasks (normally the same as -N)
 #SBATCH -A EAR23006
@@ -13,7 +12,7 @@ module load tacc-apptainer
 module load python3/3.9.2
 # Students will all be instructed to use there version of this directory
 # The yaml file defines all items that have to be customized 
-cd $SCRATCH
+
 python3 << EOI
 import time
 from mspass_launcher.hpc import HPCClusterLauncher
