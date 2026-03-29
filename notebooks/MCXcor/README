@@ -1,0 +1,32 @@
+Be aware these are rough jupyter notebooks I (Gary Pavlis) used for 
+testing the mspass multichannel cross-correlation module in MsPASS. 
+The two key elements of that module are MCXcorPrepP and 
+align_and_stack.  Together they can be treated as an automated 
+version of something I worked on more than a decade ago calle "dbxcor"
+that is part of Antelope.   
+
+These are rough but here is what they do:
+
+MCXcor_Data_Preparation.ipynb
+As the name suggests this shows what I had to do to create a test data 
+on which I could run the code.   It is not reproducible because it depends 
+upon a collection of miniseed data I had spinning at the time I was doing 
+that testing. 
+
+MCcorProcessing.ipynb 
+This is an example workflow showing how to run the code after the data
+set is prepared with something comparable to above. For reasons I don't 
+recall the graphics are empty.  Use this notebook with caution as it 
+may contain errors. I'm posting it for guidance only.
+
+sidebar.ipynb
+This is random bunch of stuff I include for two reasons.  First, it contains 
+some useful constructs to help understand what the multichannel does and 
+the metadata it creates and requires.   Second, it is a good example for 
+anyone using MsPASS of something I find is almost always required when 
+using MsPASS.   I use sidebar as a way to validate intermediat results 
+without having to color my actual run script with baggage that may not 
+be required and which is not necessarily transportable.   Be ESPECIALLY way
+that you MUST NOT RUN this notebook from start to finish.  The code 
+cells are not designed to be run from the top down but are somewhat 
+random stuff I added and modified as needed.   
