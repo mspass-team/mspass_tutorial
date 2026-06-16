@@ -1,0 +1,5 @@
+# Datascope Database Descriptor file
+schema       css3.0
+dbpath       /anf/TA/dbs/event_dbs/dbmaster/{usarray}:/anf/TA/dbs/dbops/{usarray}
+dblocks	nfs
+dbidserver   anfops.ucsd.edu:2495
