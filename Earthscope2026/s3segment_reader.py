@@ -509,35 +509,30 @@ async def s3_segmenter(doc,
     result = TimeSeriesEnsemble()
     s3_client=None
     try:
-        #ddist.print("Creating s3 client")
+        #print("Creating s3 client")
         if session is None:
-            #ddist.print("Trying to create s3_client in parallel mode")
+            #print("Trying to create s3_client in parallel mode")
             s3_client=await fetch_s3_client()
-            #ddist.print("success")
+            #print("success")
         else:
             s3_client=await fetch_s3_client(session)
         s3objects=doc["s3objects"]
-        strm = None
         for s3key in s3objects:
             # this function should never throw an exception but return a None if 
             # if fails strmread
-            stread,elog = await get_object_with_iris_versions(s3_client,s3key,BUCKET)
-            if stread is None:
+            print("Trying to fetch data s3 object with key=",s3key)
+            strm,elog = await get_object_with_iris_versions(s3_client,s3key,BUCKET)
+            if strm is None:
                 print("DEBUG:  empty stream - returning empty ensemble")
                 bad_result = TimeSeriesEnsemble()
                 bad_result.elog = elog
                 return bad_result
-            else:
-                if strm is None:
-                    strm = stread
-                else:
-                    strm += stread
-                    del stread
  
+        print("size of stream from obspy reader=",len(strm))
         channel_select = doc["channel_select"]
         if len(channel_select)>0:
             strm=strm.select(channel=channel_select)
-        #print("stream size after select=",len(strm))
+        print("stream size after select=",len(strm))
         if len(strm)>0:
             if detrend_type != "None":
                 strm.detrend(detrend_type)
@@ -545,7 +540,7 @@ async def s3_segmenter(doc,
             # it works by comparing successive Trace objects
             strm.sort()
             strm.merge()
-            #print("Stream size sent to ensemble converter = ",len(strm))
+            print("Stream size sent to ensemble converter = ",len(strm))
             alldata = Stream2TimeSeriesEnsemble(strm)
             del strm
             # elog contains error messages posted by get_object_with_iris_versions 
@@ -557,7 +552,7 @@ async def s3_segmenter(doc,
             else:
                 #print("Ensemble with ",len(alldata.member)," members has no data marked live - returning empty result")
                 return result
-            #print("Number of live data in alldata=",number_live(alldata))
+            print("Number of live data in alldata=",number_live(alldata))
             stlist = doc["start"]
             etlist = doc["end"]
             arrival_auxdata = doc["arrival"]
@@ -585,6 +580,7 @@ async def s3_segmenter(doc,
                 #print("Size of result = ",len(result.member))
             if has_live_data(result)>0:
                 #print("Setting result live")
+                print("Returning ensemble with ",number_live(ens)," live members")
                 result.set_live()
     except Exception as e:
         message="basic_s3_segmenter failed with when the following exception was thrown:\n"
