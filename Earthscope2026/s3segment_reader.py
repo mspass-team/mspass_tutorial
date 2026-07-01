@@ -26,9 +26,8 @@ import obspy
 from obspy import UTCDateTime
 import pandas as pd
 import calendar
-import asyncio
-#from mspasspy.util.db_utils import fetch_dbhandle
 from mspasspy.util.db_utils import fetch_dbhandle
+from mspasspy.ccore.utility import ErrorSeverity
 from mspasspy.ccore.seismic import TimeSeriesEnsemble
 from mspasspy.util.converter import Stream2TimeSeriesEnsemble
 from mspasspy.util.seismic import number_live
@@ -40,38 +39,48 @@ from botocore.exceptions import ClientError,BotoCoreError
 from s3_worker_plugin import fetch_s3_client
 BUCKET="earthscope-mseed-res-na3mtd4fq5kz7pntcyr1uh46use2a--ol-s3"
 
-
-async def fetch_net_day_list(s3_client,
+def fetch_net_day_list(s3_client,
                        net,
                        year,
                        day,
                        bucket=BUCKET,
-		       strip_version=True,
-                       )->list:
+                    )->list:
     """
     Fetch the raw list of object names from s3 for network net for year and julian day day.  
-
     Returns a list of strings.  Drops other metadata returning only the string defining 
     s3 object names.
-    
-    Note s3_client is assumed to be an AsyncEarthScopeClient which is 
-    async.   That is why the function signature is async.   As usual that 
-    means calling this function requires an await construct.
     """
     base_prefix = "miniseed"
     prefix = f"{base_prefix}/{net}/{year}/{day:03d}/"
     # works for now - BUCKET needs to be an arg
-    list_resp = await s3_client.list_objects_v2(Bucket=bucket, Prefix=prefix, Delimiter="/")
+    list_resp = s3_client.list_objects_v2(Bucket=bucket, Prefix=prefix, Delimiter="/")
     keys=[]
     for obj in list_resp['Contents']:
         rawkey = obj['Key']
-        keys.append(rawkey)
-        if strip_version:
-            k = rawkey.split("#")
-            key2use=k[0]
-        else:
-            key2use = rawkey
-        keys.append(key2use)
+        k = rawkey.split("#")
+        keys.append(k[0])
+    return keys
+
+def fetch_net_day_list(s3_client,
+                       net,
+                       year,
+                       day,
+                       bucket=BUCKET,
+                       )->list:
+    """
+    Fetch the raw list of object names from s3 for network net for year and julian day day.  
+    Returns a list of strings.  Drops other metadata returning only the string defining 
+    s3 object names.
+    """
+    base_prefix = "miniseed"
+    prefix = f"{base_prefix}/{net}/{year}/{day:03d}/"
+    # works for now - BUCKET needs to be an arg
+    list_resp = s3_client.list_objects_v2(Bucket=bucket, Prefix=prefix, Delimiter="/")
+    keys=[]
+    for obj in list_resp['Contents']:
+        rawkey = obj['Key']
+        k = rawkey.split("#")
+        keys.append(k[0])
     return keys
 
 def objlist2doclist(objlist,auxmd=None):
@@ -347,10 +356,10 @@ def has_live_data(ensemble)->bool:
             return True
     return False
 
-async def get_object_with_iris_versions(s3_client,
+def get_object_with_iris_versions(s3_client,
                                   base_name,
                                   BUCKET,
-                                  versions2try=["None","#1","#2","#3"],
+                                  versions2try=["None","#3","#2","#1"],
                                   )->tuple:
     """
     At the present time the Earthscope s3 waveform archives use a relic
@@ -364,7 +373,7 @@ async def get_object_with_iris_versions(s3_client,
 
     At the moment use of that versioning seems transient and sometimes you
     need it and sometimes you don't.   This function works around that
-    problem try using the more lightweibht "head_object" method of the
+    problem by using the more lightweight "head_object" method of the
     s3 client to try to find a valid name before it tries a full
     fetch with get_object.
 
@@ -396,7 +405,6 @@ async def get_object_with_iris_versions(s3_client,
     elog = ErrorLogger()
     alg = "get_object_with_iris_versions"
     ntries = 0   # used to test if nothing worked
-    version_found = "FAILED"
     for version in versions2try:
         ntries += 1
         if version is None:
@@ -404,18 +412,13 @@ async def get_object_with_iris_versions(s3_client,
         else:
             s3name = base_name + version
         try:
-            #print("DEBUG:  trying ",s3name)
             # this has less overhead to test for existence
             # intentionally throw the bits returned on the floor
-            response = await s3_client.head_object(
+            response = s3_client.head_object(
                 Bucket=BUCKET,
                 Key=s3name,
                 )
-            version_found=version
-            #print("Found key=",s3name)
-            break
         except ClientError as e:
-            #print("DEBUG:  error handler entered for s3name=",s3name)
             message = "Error trying to fetch object with name={}\n".format(s3name)
             if e.response['Error']['Code'] == '404':
                 message += "object with that name does not exist"
@@ -423,53 +426,43 @@ async def get_object_with_iris_versions(s3_client,
             elif e.response['Error']['Code'] == '403':
                 message += "object exists but access is restried and you cannot retrieve it"
                 elog.log_error(alg,message,ErrorSeverity.Invalid)
-                continue
+                return [None,elog]
             else:
                 message += "Unknown error occurred - here is the message posted:\n{}".format(e)
                 elog.log_error(alg,message,ErrorSeverity.Invalid)
-                continue
-    #print("DEBUG:  found version = ",version_found," will try key = ",s3name)
-    if version_found == "FAILED":
+                return [None,elog]
+        break
+    if ntries >= len(versions2try):
         message = f"No valid version of object name {base_name} was found - cannot retieve these data"
         elog.log_error(alg,message,ErrorSeverity.Invalid)
         return [None,elog]
-    recover_failed = False
-    # python oddity requires this be initialized
-    raws3data = None
     try:
-        #print("DEBUG:  trying to fetch ",s3name)
-        s3obj = await s3_client.get_object(Bucket=BUCKET, Key=s3name)
-        async with s3obj["Body"] as stream:
-            raws3data = await stream.read()
+        s3obj = s3_client.get_object(Bucket=BUCKET, Key=s3name)
+        # online sources say it is best practice to do this inside the
+        # try block as read can fail
+        data = s3obj["Body"].read()
     except ClientError as e:
+        # Generate a descriptive message to define problem
+        # note this list comes from Gemini - not easy to know if list is up to date
+        error_code = e.response['Error']['Code']
         message = "s3_client.get_object method failed fetching object name={}".format(s3name)
-	# try to recover if the name has version number
-        testkey = s3name.split("#")
-        if len(testkey)>1:
-            try:
-                print("Trying to recover by fetching ",testkey[0])
-                s3obj = await s3_client.get_object(Bucket=BUCKET, Key=testkey[0])
-                async with s3obj["Body"] as stream:
-                    raws3data = await stream.read()
-            except ClientError as e:
-                #print("DEBUG:  Entered error handler for get_object section")
-                recover_failed = True
-                message += "Recovery failed with alternative key = {}\n".format(testkey[0])
-                message += "Exception message from handler follows:\n"
-                # Generate a descriptive message to define problem
-                # note this list comes from Gemini - not easy to know if list is up to date
-                error_code = e.response['Error']['Code']
-        
-                if error_code == 'NoSuchKey':
-                    message += f"The object {s3name} does not exist in bucket {BUCKET}."
-                elif error_code == 'AccessDenied':
-                    message += f"Access denied to {s3name}. Check IAM policies/KMS keys."
-                elif error_code in ['NoSuchBucket', 'AllAccessDisabled']:
-                    message += f"Fatal S3 Configuration Error: {error_code}"
-                else:
-                    message += f"Unexpected AWS ClientError ({error_code}): {e}"
-                elog.log_error(alg,message,ErrorSeverity.Invalid)
-                return [None,elog]
+
+        if error_code == 'NoSuchKey':
+            message += f"The object {s3name} does not exist in bucket {BUCKET}."
+            elog.log_error(alg,message,ErrorSeverity.Invalid)
+            return [None,elog]
+        elif error_code == 'AccessDenied':
+            message += f"Access denied to {s3name}. Check IAM policies/KMS keys."
+            elog.log_error(alg,message,ErrorSeverity.Invalid)
+            return [None,elog]
+        elif error_code in ['NoSuchBucket', 'AllAccessDisabled']:
+            message += f"Fatal S3 Configuration Error: {error_code}"
+            elog.log_error(alg,message,ErrorSeverity.Fatal)
+            return [None,elog]
+        else:
+            message += f"Unexpected AWS ClientError ({error_code}): {e}"
+            elog.log_error(alg,message,ErrorSeverity.Invalid)
+            return [None,elog]
 
     except BotoCoreError as e:
         message += f"Low-level BotoCore error occurred: {e}"
@@ -483,8 +476,7 @@ async def get_object_with_iris_versions(s3_client,
         # Convert to an obspy stream and return that
         # if it fails return a None and different elog message
         try:
-            strm = obspy.read(io.BytesIO(raws3data),format="mseed")
-            #print(strm)
+            strm = obspy.read(io.BytesIO(data),format="mseed")
             return [strm,elog]
         except Exception as e:
             message = f"obspy.read failed decoding data retrieved from s3 object name={s3name}\n"
@@ -492,7 +484,7 @@ async def get_object_with_iris_versions(s3_client,
             elog.log_error(alg,message,ErrorSeverity.Invalid)
             return [None,elog]
 
-async def s3_segmenter(doc,
+def get_s3_segments(doc,
                        session=None,
                        bucket=BUCKET,
                        detrend_type="None",
@@ -509,30 +501,35 @@ async def s3_segmenter(doc,
     result = TimeSeriesEnsemble()
     s3_client=None
     try:
-        #print("Creating s3 client")
+        #ddist.print("Creating s3 client")
         if session is None:
-            #print("Trying to create s3_client in parallel mode")
-            s3_client=await fetch_s3_client()
-            #print("success")
+            #ddist.print("Trying to create s3_client in parallel mode")
+            s3_client=fetch_s3_client()
+            #ddist.print("success")
         else:
-            s3_client=await fetch_s3_client(session)
+            s3_client=fetch_s3_client(session)
         s3objects=doc["s3objects"]
+        rawlist=list()
+        strm = None
         for s3key in s3objects:
             # this function should never throw an exception but return a None if 
             # if fails strmread
-            print("Trying to fetch data s3 object with key=",s3key)
-            strm,elog = await get_object_with_iris_versions(s3_client,s3key,BUCKET)
-            if strm is None:
-                print("DEBUG:  empty stream - returning empty ensemble")
+            stread,elog = get_object_with_iris_versions(s3_client,s3key,BUCKET)
+            if stread is None:
                 bad_result = TimeSeriesEnsemble()
                 bad_result.elog = elog
                 return bad_result
+            else:
+                if strm is None:
+                    strm = stread
+                else:
+                    strm += stread
+                    del stread
  
-        print("size of stream from obspy reader=",len(strm))
         channel_select = doc["channel_select"]
         if len(channel_select)>0:
             strm=strm.select(channel=channel_select)
-        print("stream size after select=",len(strm))
+        #print("stream of size after select=",len(strm))
         if len(strm)>0:
             if detrend_type != "None":
                 strm.detrend(detrend_type)
@@ -540,19 +537,18 @@ async def s3_segmenter(doc,
             # it works by comparing successive Trace objects
             strm.sort()
             strm.merge()
-            print("Stream size sent to ensemble converter = ",len(strm))
             alldata = Stream2TimeSeriesEnsemble(strm)
             del strm
             # elog contains error messages posted by get_object_with_iris_versions 
             # always save them to sort out data store problems by sifting through elogs
             result.elog += elog
             # workaround for bug github issue 710
-            if has_live_data(alldata):
-                alldata.set_live()
-            else:
-                #print("Ensemble with ",len(alldata.member)," members has no data marked live - returning empty result")
-                return result
-            print("Number of live data in alldata=",number_live(alldata))
+            if alldata.dead():
+                if has_live_data(alldata):
+                    alldata.set_live()
+                else:
+                    print("Ensemble with ",len(alldata.member)," members has no data marked live - returning empty result")
+                    return result
             stlist = doc["start"]
             etlist = doc["end"]
             arrival_auxdata = doc["arrival"]
@@ -580,21 +576,10 @@ async def s3_segmenter(doc,
                 #print("Size of result = ",len(result.member))
             if has_live_data(result)>0:
                 #print("Setting result live")
-                print("Returning ensemble with ",number_live(ens)," live members")
                 result.set_live()
     except Exception as e:
         message="basic_s3_segmenter failed with when the following exception was thrown:\n"
         message += str(e)
-        result.elog.log_error("basic_s3_segmente",message,ErrorSeverity.Invalid)
+        result.elog.log_error("get_s3_segments",message,ErrorSeverity.Invalid)
     #print("Debug - returning result with state=",result.live)
     return result
-
-def make_sync(async_func):
-    """
-    Takes an async function and wraps it inside a standard synchronous function.
-    """
-    def sync_wrapper(*args, **kwargs):
-        # Drive the async function to completion using an event loop
-        return asyncio.run(async_func(*args, **kwargs))
-        
-    return sync_wrapper
