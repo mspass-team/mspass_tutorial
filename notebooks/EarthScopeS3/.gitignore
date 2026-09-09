@@ -1,0 +1,8 @@
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+css30/
+pf/
+*.pickle
+*.bin
+ANF48_*.json
