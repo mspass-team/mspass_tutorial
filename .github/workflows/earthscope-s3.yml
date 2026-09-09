@@ -1,0 +1,35 @@
+name: EarthScope S3 workflow
+
+on:
+  pull_request:
+    paths:
+      - 'notebooks/EarthScopeS3/**'
+      - '.github/workflows/earthscope-s3.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'notebooks/EarthScopeS3/**'
+      - '.github/workflows/earthscope-s3.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  offline-auth-and-notebooks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.10', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install 'earthscope-sdk>=1.6.1,<1.8' 'dask[distributed]' pytest
+      - name: Credential lifecycle, worker process, and sanitized notebooks
+        working-directory: notebooks/EarthScopeS3
+        run: python -m pytest -q test_s3_worker_plugin.py test_plugin_process.py test_notebooks.py
+      - name: Compile modules without running notebooks
+        run: python -m compileall -q notebooks/EarthScopeS3
